@@ -1,0 +1,2719 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" id="viewport-meta" content="width=device-width, initial-scale=1.0">
+<title>PARK SANGIN — Fashion Designer</title>
+<!-- 폰트 preconnect: 카카오톡 등 인앱브라우저 호환 -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- preload: 폰트 CSS를 최우선 로드 -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<!-- 실제 폰트 로드 (onload로 비동기 적용 후 rel 전환) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" media="print" onload="this.media='all'; this.onload=null;">
+<!-- noscript fallback -->
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap"></noscript>
+<style>
+/* 폰트 인라인 @import — 카카오톡 인앱브라우저 직접 로드 보장 */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+</style>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --white: #ffffff;
+  --dark: #1A1A1A;
+  --green: #afd7a4;
+  --green-dark: #7fb872;
+  --muted: #666;
+  --grid: rgba(170,195,205,0.3);
+  --paper: #f9f9f7;
+  --tape: rgba(175,215,164,0.45);
+  --shadow: #c8c8c4;
+}
+
+html { scroll-behavior: smooth; }
+
+/* 네비 높이만큼 스크롤 여백 */
+section[id], div[id] {
+  scroll-margin-top: 64px;
+}
+body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--dark); overflow-x: hidden; overflow-x: clip; }
+
+/* 전체 너비 고정 */
+.page-wrapper {
+  max-width: 1440px;
+  min-width: 1280px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 0 40px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 1024px) {
+  .page-wrapper {
+    min-width: 393px;
+    max-width: 393px;
+    width: 393px;
+    margin: 0 auto;
+  }
+}
+
+/* GRID BG */
+.grid-bg {
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white); border-bottom: 2px solid var(--dark);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 3rem 1rem 3.5rem;
+}
+.logo {
+  font-family: 'Special Elite', cursive; font-size: 1.15rem;
+  letter-spacing: 0.06em; color: var(--dark); text-decoration: none;
+}
+.logo-tag {
+  display: inline-block; background: var(--green); padding: 2px 8px;
+  margin-left: 6px; font-family: 'Courier Prime', monospace;
+  font-size: 0.62rem; letter-spacing: 0.18em; vertical-align: middle; color: var(--dark);
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-family: 'Courier Prime', monospace; font-size: 0.75rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--green-dark); }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); }
+
+.mobile-menu {
+  display: none; position: fixed; inset: 0; background: var(--dark);
+  z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: 'Special Elite', cursive; font-size: 2rem; color: var(--white); text-decoration: none; transition: color 0.2s; }
+.mobile-menu a:hover { color: var(--green); }
+.close-btn { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--white); font-size: 2rem; cursor: pointer; }
+
+/* HERO */
+.hero {
+  min-height: 50vh; display: grid; grid-template-columns: 1fr 0.8fr;
+  align-items: center; padding: 1.28rem 2.5rem; gap: 0;
+  position: relative; overflow: hidden;
+}
+.hero-text { padding-left: 29%; }
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+
+.hero-stamp {
+  font-family: 'Courier Prime', monospace; font-size: 0.65rem;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-dark);
+  border: 1.5px solid var(--green-dark); display: inline-block;
+  padding: 3px 10px; margin-bottom: 1.5rem; transform: rotate(-1deg);
+}
+.hero h1 {
+  font-family: 'Special Elite', cursive;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 1.08; margin-bottom: 1.5rem;
+}
+.hero h1 .hl {
+  position: relative; display: inline-block;
+}
+.hero h1 .hl::after {
+  content: ''; position: absolute; bottom: 2px; left: 0; right: 0;
+  height: 10px; background: var(--green); opacity: 0.5; z-index: -1;
+}
+.hero-desc {
+  font-family: 'Courier Prime', monospace; font-size: 0.88rem; line-height: 1.9;
+  color: var(--muted); max-width: 400px; margin-bottom: 2.5rem;
+}
+.btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary {
+  padding: 0.8rem 1.8rem; background: var(--dark); color: var(--white);
+  font-family: 'Courier Prime', monospace; font-size: 0.75rem;
+  letter-spacing: 0.12em; text-transform: uppercase; border: 2px solid var(--dark);
+  cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block;
+}
+.btn-primary:hover { background: var(--green); border-color: var(--green); color: var(--dark); }
+.btn-outline {
+  padding: 0.8rem 1.8rem; border: 2px solid var(--dark); color: var(--dark);
+  font-family: 'Courier Prime', monospace; font-size: 0.75rem; letter-spacing: 0.12em;
+  text-transform: uppercase; background: transparent; cursor: pointer; transition: all 0.25s;
+  text-decoration: none; display: inline-block;
+}
+.btn-outline:hover { background: var(--dark); color: var(--white); }
+
+/* HERO NOTEBOOK */
+
+.hero-notebook { position: relative; display: flex; justify-content: flex-start; align-items: center; }
+.notebook-card {
+  background: var(--paper); border: 1.5px solid #ccc;
+  padding: 1.26rem; position: relative;
+  box-shadow: 3.5px 3.5px 0 var(--shadow); transform: rotate(1.2deg);
+  width: 70%; max-width: 300px;
+}
+.notebook-card::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(170,195,205,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(170,195,205,0.15) 1px, transparent 1px);
+  background-size: 20px 20px; pointer-events: none;
+}
+.tape-h { display: block; height: 11px; background: var(--tape); border: 1px solid rgba(175,215,164,0.55); margin: 0 -1.26rem 0.7rem; }
+.profile-placeholder {
+  width: 100%; aspect-ratio: 3/4; background: #e0ead0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 1px solid #c0c8b8; position: relative; overflow: hidden;
+}
+.profile-placeholder svg { opacity: 0.35; }
+.profile-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: var(--dark); color: var(--white);
+  font-family: 'Courier Prime', monospace; font-size: 0.6rem;
+  letter-spacing: 0.15em; text-transform: uppercase; padding: 6px 10px; text-align: center;
+}
+.card-meta {
+  margin-top: 1rem; font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem; color: var(--muted); line-height: 1.9;
+}
+.card-meta strong { color: var(--dark); font-weight: 700; }
+
+/* INDEX BANNER */
+.index-banner {
+  background: var(--dark); color: var(--white);
+  padding: 1.5rem 3rem 1.5rem 4rem;
+  display: flex; gap: 3rem; align-items: flex-start; flex-wrap: wrap;
+  border-bottom: 3px solid var(--green);
+}
+.index-item { position: relative; padding-left: 1rem; display: flex; flex-direction: column; justify-content: flex-start; align-self: flex-start; }
+.index-item::before { content: '—'; position: absolute; left: 0; color: var(--green); }
+.index-item a {
+  font-family: 'Courier Prime', monospace; font-size: 0.78rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: #ccc; text-decoration: none; transition: color 0.2s;
+}
+.index-item a:hover { color: var(--green); }
+.index-item small { display: block; font-family: 'Courier Prime', monospace; font-size: 0.6rem; color: #666; margin-top: 1px; }
+
+/* SECTION COMMON */
+section { padding: 5rem 3rem 5rem 4rem; }
+.section-label {
+  font-family: 'Courier Prime', monospace; font-size: 0.62rem;
+  letter-spacing: 0.25em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.4rem;
+}
+.section-title {
+  text-shadow: 0 4px 18px rgba(175,215,164,0.18);
+  font-family: 'Special Elite', cursive; font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+  margin-bottom: 3rem; position: relative; display: inline-block;
+}
+.section-title::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 8px; background: var(--green); opacity: 0.4; z-index: -1;
+}
+
+/* DEEP DIVE */
+.deep-dive { background: var(--white); }
+.deep-grid {
+  display: grid; grid-template-columns: 1fr; gap: 2.5rem;
+}
+.deep-card {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border: 1.5px solid #ccc; box-shadow: 4px 4px 0 var(--shadow);
+  background: var(--paper); cursor: pointer; transition: box-shadow 0.3s;
+  overflow: hidden;
+}
+.deep-card:hover { box-shadow: 6px 6px 0 var(--green); }
+.deep-img {
+  background: #dde8db;
+  display: flex; align-items: flex-start; justify-content: center;
+  font-family: 'Courier Prime', monospace; font-size: 0.6rem;
+  color: #aaa; text-align: center; padding: 0;
+  border-right: 1px solid #ccc; overflow: hidden; position: relative;
+  aspect-ratio: 2 / 3;
+  width: 100%;
+}
+.deep-img-label {
+  position: absolute; top: 0.5rem; left: 0.5rem;
+  background: var(--dark); color: var(--white);
+  font-family: 'Courier Prime', monospace; font-size: 0.55rem;
+  letter-spacing: 0.1em; padding: 2px 6px;
+  z-index: 10;
+}
+.deep-info { padding: 1.6rem; display: flex; flex-direction: column; justify-content: space-between; }
+.deep-season {
+  font-family: 'Courier Prime', monospace; font-size: 0.78rem;
+  letter-spacing: 0.15em; color: var(--green-dark); text-transform: uppercase; margin-bottom: 0.4rem;
+}
+.deep-title { font-family: 'Special Elite', cursive; font-size: 1.28rem; margin-bottom: 0.4rem; line-height: 1.3; }
+.deep-brand {
+  font-family: 'Courier Prime', monospace; font-size: 0.88rem;
+  color: var(--muted); margin-bottom: 0.8rem;
+}
+.deep-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag {
+  font-family: 'Courier Prime', monospace; font-size: 0.72rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border: 1px solid #ccc; padding: 3px 9px; color: var(--muted);
+}
+
+/* ARCHIVE */
+.archive-section { background: var(--paper); position: relative; }
+.archive-section::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px; z-index: 0;
+}
+.archive-section > * { position: relative; z-index: 1; }
+
+/* 아카이브 헤더 */
+.archive-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+.archive-count {
+  font-family: 'Courier Prime', monospace; font-size: 0.7rem;
+  color: var(--muted); letter-spacing: 0.1em;
+}
+.archive-count strong { color: var(--green-dark); }
+
+/* 필터 탭 */
+.arc-filters {
+  display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;
+}
+.arc-filter-btn {
+  font-family: 'Courier Prime', monospace; font-size: 0.65rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1.5px solid #ccc; background: transparent; color: var(--muted);
+  padding: 5px 14px; cursor: pointer; transition: all 0.2s;
+}
+.arc-filter-btn:hover { border-color: var(--green-dark); color: var(--dark); }
+.arc-filter-btn.active {
+  background: var(--dark); border-color: var(--dark); color: var(--white);
+}
+
+/* 타임라인 뷰 토글 */
+.arc-view-toggle { display: flex; gap: 0.4rem; }
+.arc-view-btn {
+  width: 32px; height: 32px; border: 1.5px solid #ccc; background: transparent;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  color: var(--muted); transition: all 0.2s; font-size: 0.85rem;
+}
+.arc-view-btn.active { background: var(--dark); border-color: var(--dark); color: var(--white); }
+
+/* 그리드 뷰 */
+.archive-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.archive-card {
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.archive-card.hidden { display: none; }
+.archive-card:nth-child(3n+1) .arc-inner { transform: rotate(-1deg); }
+.archive-card:nth-child(3n+2) .arc-inner { transform: rotate(0.8deg); }
+.archive-card:nth-child(3n) .arc-inner { transform: rotate(-0.5deg); }
+.archive-card:hover .arc-inner { transform: rotate(0) scale(1.02); }
+.arc-inner {
+  background: var(--white); border: 1.5px solid #ccc;
+  box-shadow: 3px 3px 0 #bbb; transition: transform 0.3s, box-shadow 0.3s; overflow: hidden;
+}
+/* 모바일: arc-inner 높이 자동 확장, overflow 해제 */
+@media (max-width: 1024px) {
+  .arc-inner {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  .archive-card {
+    overflow: visible !important;
+    padding-bottom: 0.5rem;
+  }
+}
+.archive-card:hover .arc-inner { box-shadow: 5px 5px 0 var(--green); }
+.arc-tape { display: block; height: 14px; background: var(--tape); border-bottom: 1px solid rgba(175,215,164,0.5); }
+.arc-img {
+  width: 100%; aspect-ratio: 4/3; background: #e4ede2;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Courier Prime', monospace; font-size: 0.6rem;
+  color: #b0c0ae; text-align: center; padding: 0.5rem; position: relative;
+  overflow: hidden;
+}
+.arc-img img { width: 100%; height: 100%; object-fit: contain; object-position: center center; display: block; transition: transform 0.4s ease; }
+.archive-card:hover .arc-img img { transform: scale(1.05); }
+.arc-season-tag {
+  position: absolute; top: 0.5rem; right: 0.5rem;
+  background: var(--dark); color: var(--white);
+  font-family: 'Courier Prime', monospace; font-size: 0.55rem;
+  letter-spacing: 0.1em; padding: 2px 6px; z-index: 2;
+}
+.arc-info { padding: 0.75rem 0.9rem 0.9rem; border-top: 1px dashed #ccc; }
+.arc-num { font-family: 'Courier Prime', monospace; font-size: 0.6rem; color: var(--green-dark); margin-bottom: 0.2rem; }
+.arc-title { font-family: 'Special Elite', cursive; font-size: 0.92rem; margin-bottom: 0.15rem; }
+.arc-meta { font-family: 'Courier Prime', monospace; font-size: 0.68rem; color: var(--muted); }
+.arc-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 0.5rem; }
+.arc-tag {
+  font-family: 'Courier Prime', monospace; font-size: 0.55rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border: 1px solid #ddd; padding: 2px 6px; color: #aaa;
+}
+
+/* 타임라인 뷰 */
+.archive-timeline { display: none; }
+.archive-timeline.active { display: block; }
+.archive-grid.timeline-hidden { display: none; }
+
+.timeline-brand-block { margin-bottom: 3.5rem; }
+.timeline-brand-label {
+  font-family: 'Special Elite', cursive; font-size: 1.1rem;
+  border-bottom: 2px solid var(--dark); padding-bottom: 0.6rem; margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.timeline-brand-label span {
+  font-family: 'Courier Prime', monospace; font-size: 0.6rem;
+  background: var(--green); color: var(--dark);
+  padding: 2px 8px; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.timeline-rows { position: relative; padding-left: 2.5rem; }
+.timeline-rows::before {
+  content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+  width: 2px; background: repeating-linear-gradient(to bottom, var(--green) 0, var(--green) 6px, transparent 6px, transparent 12px);
+}
+.timeline-item {
+  display: grid; grid-template-columns: 100px 1fr;
+  gap: 1.5rem; margin-bottom: 1.5rem; align-items: start;
+  cursor: pointer; position: relative;
+}
+.timeline-item::before {
+  content: ''; position: absolute; left: -2rem; top: 0.6rem;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--white); border: 2px solid var(--green-dark);
+  transition: background 0.2s;
+}
+.timeline-item:hover::before { background: var(--green); }
+.timeline-item:hover .tl-title { color: var(--green-dark); }
+.tl-season {
+  font-family: 'Courier Prime', monospace; font-size: 0.65rem;
+  letter-spacing: 0.12em; color: var(--green-dark); text-transform: uppercase;
+  padding-top: 0.35rem;
+}
+.tl-body { border-left: none; }
+.tl-title {
+  font-family: 'Special Elite', cursive; font-size: 1rem;
+  margin-bottom: 0.25rem; transition: color 0.2s;
+}
+.tl-desc {
+  font-family: 'Courier Prime', monospace; font-size: 0.88rem;
+  color: var(--muted); line-height: 1.7; margin-bottom: 0.4rem;
+}
+.tl-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.tl-chip {
+  font-family: 'Courier Prime', monospace; font-size: 0.55rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border: 1px solid #ccc; padding: 1px 7px; color: #999;
+}
+
+/* 아카이브 모달 */
+.arc-modal {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(26,26,26,0.82); align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.arc-modal.open { display: flex; }
+.arc-modal-inner {
+  background: var(--paper); border: 1.5px solid #ccc;
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.25);
+  max-width: 1180px; width: 96%; max-height: 92vh;
+  overflow-y: auto; position: relative;
+}
+.arc-modal-tape { display: block; height: 26px; background: var(--tape); border-bottom: 1px solid rgba(175,215,164,0.5); }
+.arc-modal-close {
+  position: absolute; top: 1.2rem; right: 1.2rem; z-index: 10;
+  width: 40px; height: 40px; background: var(--dark); color: var(--white);
+  border: none; cursor: pointer; font-size: 1.3rem; display: flex;
+  align-items: center; justify-content: center; font-family: 'Courier Prime', monospace;
+}
+.arc-modal-body { padding: 2.5rem 3rem 3rem; }
+.arc-modal-season {
+  font-family: 'Courier Prime', monospace; font-size: 0.9rem;
+  letter-spacing: 0.18em; color: var(--green-dark); text-transform: uppercase; margin-bottom: 0.6rem;
+}
+.arc-modal-title {
+  font-family: 'Special Elite', cursive; font-size: 2.5rem;
+  margin-bottom: 0.5rem; line-height: 1.2;
+}
+.arc-modal-brand {
+  font-family: 'Courier Prime', monospace; font-size: 1.08rem;
+  color: var(--muted); margin-bottom: 1.5rem;
+}
+.arc-modal-grid {
+  display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;
+}
+.arc-modal-img-wrap {
+  background: #e4ede2; min-height: 320px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Courier Prime', monospace; font-size: 0.62rem;
+  color: #b0c0ae; text-align: center; border: 1px solid #ddd;
+  overflow: hidden; position: relative;
+}
+.arc-modal-img-wrap img { width: 100%; height: auto; display: block; object-fit: contain; }
+.arc-modal-img-placeholder {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.5rem; color: #b0c0ae; text-align: center; padding: 1rem;
+}
+.arc-modal-desc {
+  font-family: 'Courier Prime', monospace; font-size: 0.78rem;
+  line-height: 1.85; color: var(--muted); margin-bottom: 1.25rem;
+}
+.arc-modal-items-label {
+  font-family: 'Courier Prime', monospace; font-size: 0.6rem;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-dark);
+  margin-bottom: 0.6rem;
+}
+.arc-modal-items { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
+.arc-modal-item {
+  font-family: 'Courier Prime', monospace; font-size: 0.68rem;
+  border: 1.5px solid #ccc; padding: 4px 10px; color: var(--dark);
+  background: var(--white);
+}
+.arc-modal-divider { border: none; border-top: 1px dashed #ccc; margin: 1.25rem 0; }
+
+/* 모달 이미지 돋보기 */
+.arc-modal-img-wrap {
+  position: relative;
+  overflow: hidden;
+  cursor: crosshair;
+}
+.arc-modal-img-wrap img {
+  width: 100%; height: auto; object-fit: contain;
+  background: #f0f0ee; display: block;
+  pointer-events: none; user-select: none;
+}
+.arc-magnifier {
+  position: absolute;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  border: 2.5px solid var(--dark);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.22), inset 0 0 0 1.5px rgba(255,255,255,0.18);
+  pointer-events: none;
+  overflow: hidden;
+  display: none;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+  background: #f9f9f7;
+}
+.arc-magnifier::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px rgba(175,215,164,0.5);
+  pointer-events: none;
+}
+.arc-magnifier img {
+  position: absolute;
+  max-width: none !important;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+/* 아카이브 빈 상태 */
+.arc-empty {
+  grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;
+  font-family: 'Courier Prime', monospace; color: var(--muted);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 1024px) {
+  .archive-grid { grid-template-columns: 1fr; }
+  .archive-card:nth-child(n) .arc-inner { transform: rotate(0); }
+  .arc-modal-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 80px 1fr; }
+  .archive-header { flex-direction: column; align-items: flex-start; }
+}
+
+/* TECH SKILLS */
+.tech-section { background: var(--dark); color: var(--white); position: relative; overflow: hidden; }
+.tech-section::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.tech-section > * { position: relative; }
+.tech-section .section-label { color: var(--green); }
+.tech-section .section-title {
+  text-shadow: 0 4px 18px rgba(175,215,164,0.18); color: var(--white); }
+.tech-section .section-title::after { background: var(--green); }
+.tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.tech-col h3 {
+  font-family: 'Courier Prime', monospace; font-size: 0.65rem;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--green);
+  margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid #333;
+}
+.skill-row { margin-bottom: 1.2rem; }
+.skill-label {
+  display: flex; justify-content: space-between;
+  font-family: 'Courier Prime', monospace; font-size: 0.75rem;
+  color: #ccc; margin-bottom: 0.5rem;
+}
+.skill-label span { color: var(--green); }
+.skill-bar-wrap { height: 4px; background: #333; }
+.skill-bar-fill { height: 100%; background: var(--green); }
+.skill-dots-row { display: flex; gap: 4px; margin-top: 0.3rem; }
+.dot { width: 8px; height: 8px; border: 1.5px solid #555; border-radius: 50%; }
+.dot.on { background: var(--green); border-color: var(--green); }
+.dot.half { background: linear-gradient(90deg, var(--green) 50%, transparent 50%); border-color: var(--green); }
+
+/* EXPERIENCE */
+.exp-section { background: var(--white); position: relative; overflow: hidden; }
+.exp-section::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px; z-index: 0;
+}
+.exp-section > * { position: relative; z-index: 1; }
+.exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.exp-item {
+  padding: 2rem; border-bottom: 1px solid #e8e8e4;
+  border-right: 1px solid #e8e8e4; position: relative;
+}
+.exp-item:nth-child(even) { border-right: none; }
+.exp-item::before {
+  content: ''; position: absolute; top: 2rem; left: 0;
+  width: 3px; height: 36px; background: var(--green);
+}
+.exp-year { font-family: 'Courier Prime', monospace; font-size: 0.62rem; letter-spacing: 0.14em; color: var(--green-dark); margin-bottom: 0.4rem; }
+.exp-role { font-family: 'Special Elite', cursive; font-size: 1.05rem; margin-bottom: 0.2rem; }
+.exp-company { font-family: 'Courier Prime', monospace; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.6rem; }
+.exp-desc { font-family: 'Courier Prime', monospace; font-size: 0.78rem; line-height: 1.75; color: #888; }
+
+/* CONTACT */
+.contact-section { background: var(--dark); color: var(--white); position: relative; overflow: hidden; text-align: center; }
+.contact-section::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(175,215,164,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(175,215,164,0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.contact-section > * { position: relative; }
+.contact-section .section-label { color: var(--green); }
+.contact-inner { max-width: 520px; margin: 0 auto; }
+.contact-inner h2 {
+  font-family: 'Special Elite', cursive; font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--white); margin-bottom: 1rem;
+}
+.contact-inner p { font-family: 'Courier Prime', monospace; color: #888; font-size: 0.88rem; line-height: 1.8; margin-bottom: 2rem; }
+.contact-email {
+  font-family: 'Special Elite', cursive; font-size: 1.25rem; color: var(--green);
+  display: inline-block; margin-bottom: 2.5rem; text-decoration: none;
+  border-bottom: 2px solid var(--green); padding-bottom: 4px; transition: opacity 0.2s;
+}
+.contact-email:hover { opacity: 0.75; }
+.contact-info {
+  font-family: 'Courier Prime', monospace; font-size: 0.75rem; color: #666;
+  margin-bottom: 2rem; line-height: 1.8;
+}
+.social-links { display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
+.social-link {
+  font-family: 'Courier Prime', monospace; font-size: 0.7rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--white);
+  text-decoration: none; border: 1.5px solid #444; padding: 6px 16px; transition: all 0.2s;
+}
+.social-link:hover { background: var(--green); border-color: var(--green); color: var(--dark); }
+
+/* FOOTER */
+footer {
+  padding: 1.25rem 3rem 1.25rem 4rem;
+  border-top: 2px solid var(--dark); display: flex;
+  justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: var(--white);
+}
+.footer-copy { font-family: 'Courier Prime', monospace; font-size: 0.7rem; color: var(--muted); }
+.footer-tag {
+  font-family: 'Courier Prime', monospace; font-size: 0.65rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  background: var(--green); color: var(--dark); padding: 3px 10px;
+}
+
+/* MOBILE */
+@media (max-width: 1024px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  /* ① 첫페이지 가운데 정렬 */
+  .hero { grid-template-columns: 1fr; min-height: auto; padding: 3rem 1.75rem 3.5rem; gap: 2.5rem; text-align: center; }
+  .hero-text { padding-left: 0; display: flex; flex-direction: column; align-items: center; }
+  .hero-notebook { order: -1; display: flex; justify-content: center; }
+  .notebook-card { transform: rotate(0.4deg); width: 60%; max-width: 280px; }
+  .hero h1 { font-size: 2.6rem; }
+  .hero-desc { font-size: 0.9rem; text-align: center; }
+  .hero-stamp { align-self: center; }
+  .hero-btns { justify-content: center; }
+
+  section { padding: 4rem 1.75rem; }
+
+  /* ② 중간 바 2열 */
+  .index-banner { padding: 1.5rem 1.75rem; gap: 1rem; display: grid; grid-template-columns: 1fr 1fr; }
+
+  .deep-grid { grid-template-columns: 1fr; }
+  .deep-card { grid-template-columns: 1fr; }
+  .deep-img { aspect-ratio: 16/9; border-right: none; border-bottom: 1px solid #ccc; }
+  .archive-grid { grid-template-columns: 1fr; }
+  .archive-card:nth-child(n) .arc-inner { transform: rotate(0); }
+  .tech-grid { grid-template-columns: 1fr; }
+
+  /* ⑥ 경력 모바일 가독성 개선 */
+  .exp-grid { grid-template-columns: 1fr; }
+  .exp-item { border-right: none; border-bottom: 1px solid #e8e8e4; padding: 1.5rem 1rem; }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-item::before { top: 1.5rem; }
+
+  .contact-inner h2 { font-size: 2rem; }
+  .contact-inner p { font-size: 0.82rem; }
+  footer { padding: 1.5rem 1.75rem; flex-direction: column; align-items: flex-start; }
+}
+
+/* TABLET */
+@media (min-width: 1025px) {
+  nav { padding: 1rem 2rem; }
+  .hero { padding: 3rem 2rem; }
+  section { padding: 4rem 2rem 4rem 2.5rem; }
+  .index-banner { padding: 1.5rem 2.5rem; }
+  .deep-grid { grid-template-columns: 1fr; }
+  .archive-grid { grid-template-columns: repeat(3, 1fr); }
+  footer { padding: 1.25rem 2rem; }
+}
+
+.deep-img { overflow: hidden; }
+.deep-img img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;
+  transition: transform 0.15s ease;
+  transform-origin: center center;
+}
+
+/* DEEP DIVE STACK ANIMATION */
+.deep-grid.stacked {
+  display: block;
+  position: relative;
+  height: 460px;
+  padding-top: 40px;
+  box-sizing: content-box;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.deep-grid.stacked .deep-card {
+  position: absolute;
+  width: 72%;
+  left: 50%;
+  transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+  overflow: hidden;
+  max-height: 420px;
+}
+.deep-grid.stacked .deep-img {
+  overflow: hidden;
+}
+.deep-grid.stacked .deep-card:nth-child(1) {
+  top: 50px; transform: translateX(-50%) rotate(-5deg); z-index: 4;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+}
+.deep-grid.stacked .deep-card:nth-child(2) {
+  top: 64px; transform: translateX(-50%) rotate(-1.5deg); z-index: 3;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+}
+.deep-grid.stacked .deep-card:nth-child(3) {
+  top: 78px; transform: translateX(-50%) rotate(2deg); z-index: 2;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+}
+.deep-grid.stacked .deep-card:nth-child(4) {
+  top: 92px; transform: translateX(-50%) rotate(5deg); z-index: 1;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+.deep-grid.stacked:hover .deep-card:nth-child(1) { top: 30px; }
+.deep-grid.stacked:hover .deep-card:nth-child(2) { top: 52px; }
+.deep-grid.stacked:hover .deep-card:nth-child(3) { top: 74px; }
+.deep-grid.stacked:hover .deep-card:nth-child(4) { top: 96px; }
+
+/* Jersey 스택 — 모달 없이 카드만 있어서 nth-child 1,2,3,4 */
+#deepGridJersey.stacked .deep-card:nth-child(1) {
+  top: 50px; transform: translateX(-50%) rotate(-5deg); z-index: 4;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+}
+#deepGridJersey.stacked .deep-card:nth-child(2) {
+  top: 64px; transform: translateX(-50%) rotate(-1.5deg); z-index: 3;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+}
+#deepGridJersey.stacked .deep-card:nth-child(3) {
+  top: 78px; transform: translateX(-50%) rotate(2deg); z-index: 2;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+}
+#deepGridJersey.stacked .deep-card:nth-child(4) {
+  top: 92px; transform: translateX(-50%) rotate(5deg); z-index: 1;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+#deepGridJersey.stacked:hover .deep-card:nth-child(1) { top: -4px; }
+#deepGridJersey.stacked:hover .deep-card:nth-child(2) { top: 18px; }
+#deepGridJersey.stacked:hover .deep-card:nth-child(3) { top: 40px; }
+#deepGridJersey.stacked:hover .deep-card:nth-child(4) { top: 62px; }
+
+/* 두 스택 나란히 */
+.deep-stacks-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 3rem;
+  align-items: start;
+}
+.deep-stack-group {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+.deep-stack-group { position: relative; }
+.stack-label {
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.stack-label-tag {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--green);
+  color: var(--dark);
+  padding: 2px 8px;
+}
+@media (max-width: 1024px) {
+  /* iOS sticky nav 보완: page-wrapper가 sticky를 막지 않도록 */
+  .page-wrapper {
+    overflow: visible;
+  }
+  /* 터치 클릭 인식을 위한 cursor:pointer 보완 */
+  .archive-card,
+  .deep-card,
+  .arc-filter-btn,
+  .arc-view-btn,
+  .index-item a,
+  .stack-hint,
+  .timeline-item,
+  [onclick] {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.05);
+  }
+  .deep-stacks-row { grid-template-columns: 1fr !important; gap: 4rem; }
+}
+@media (min-width: 1025px) {
+  .deep-stacks-row { grid-template-columns: 1fr; gap: 5rem; }
+}
+
+/* stacked 상태에서 카드 클릭 차단 */
+.deep-grid.stacked .deep-card {
+  pointer-events: none;
+}
+.deep-grid.stacked .deep-img img {
+  transition: none !important;
+  transform: scale(1) !important;
+}
+
+.deep-grid.expanded {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  height: auto !important;
+  cursor: default;
+}
+.deep-grid.expanded .deep-card {
+  position: relative !important;
+  width: auto !important;
+  left: auto !important;
+  transform: none !important;
+  top: auto !important;
+  box-shadow: none !important;
+  opacity: 0;
+  animation: cardFadeIn 0.45s ease forwards;
+  pointer-events: auto !important;
+}
+.deep-grid.expanded .deep-card:nth-child(1) { animation-delay: 0s; }
+.deep-grid.expanded .deep-card:nth-child(2) { animation-delay: 0.08s; }
+.deep-grid.expanded .deep-card:nth-child(3) { animation-delay: 0.16s; }
+.deep-grid.expanded .deep-card:nth-child(4),
+.deep-grid.expanded .deep-card:nth-child(5) { animation-delay: 0.24s; }
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.stack-hint {
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  animation: hintBlink 1.8s ease-in-out infinite;
+  cursor: pointer;
+}
+.stack-hint.hidden { display: none; }
+.stack-hint.collapse-mode {
+  margin-top: 2rem;
+  animation: hintBlink 1.8s ease-in-out infinite;
+}
+@keyframes hintBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@media (max-width: 1024px) {
+  .deep-grid.stacked {
+    height: 520px;       /* 카드 전체 내용이 보이도록 충분히 확보 */
+    overflow: visible;   /* 하단 잘림 방지 */
+  }
+  .deep-grid.stacked .deep-card {
+    width: 85%;
+    max-height: none;    /* 높이 제한 해제 */
+    overflow: visible;
+  }
+  .deep-grid.expanded { grid-template-columns: 1fr; }
+  .stack-hint { margin-top: 20px; }
+}
+@media (min-width: 1025px) {
+  .deep-grid.expanded { grid-template-columns: 1fr; }
+}
+
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,0.75); align-items: center; justify-content: center;
+  padding: 1.5rem;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--paper); max-width: 900px; width: 100%;
+  max-height: 90vh; overflow-y: auto; position: relative;
+  border: 1.5px solid #ccc; box-shadow: 8px 8px 0 #333;
+}
+.modal-tape { display: block; height: 16px; background: var(--tape); border-bottom: 1px solid rgba(175,215,164,0.55); }
+.modal-close {
+  position: sticky; top: 0; float: right; margin: 0.8rem 1rem 0 0;
+  background: var(--dark); color: var(--white); border: none; cursor: pointer;
+  font-family: 'Courier Prime', monospace; font-size: 0.72rem;
+  letter-spacing: 0.1em; padding: 4px 12px; z-index: 10;
+}
+.modal-close:hover { background: var(--green-dark); }
+.modal-inner { padding: 1.5rem 2rem 2rem; clear: both; }
+.modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.modal-img { width: 100%; object-fit: cover; border: 1px solid #ddd; display: block; }
+.modal-title {
+  font-family: 'Special Elite', cursive; font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+.modal-season {
+  font-family: 'Courier Prime', monospace; font-size: 0.7rem;
+  letter-spacing: 0.18em; color: var(--green-dark); text-transform: uppercase; margin-bottom: 1.2rem;
+}
+.modal-section-title {
+  font-family: 'Courier Prime', monospace; font-size: 0.65rem;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-dark);
+  border-bottom: 1px dashed #ccc; padding-bottom: 0.4rem; margin: 1.2rem 0 0.8rem;
+}
+.modal-desc {
+  font-family: 'Courier Prime', monospace; font-size: 0.82rem;
+  line-height: 1.85; color: #555;
+}
+.modal-spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.5rem; }
+.modal-spec-item {
+  font-family: 'Courier Prime', monospace; font-size: 0.78rem;
+  color: #555; line-height: 1.7;
+}
+.modal-spec-item strong { color: var(--dark); }
+.modal-techpack { width: 100%; border: 1px solid #ddd; margin-top: 0.5rem; display: block; }
+.modal-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 1rem; }
+@media (max-width: 600px) {
+  .modal-grid { grid-template-columns: 1fr; }
+  .modal-spec-grid { grid-template-columns: 1fr; }
+  .modal-inner { padding: 1rem 1.2rem 1.5rem; }
+}
+
+/* Deep Dive Detail Modal */
+.dd-modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(26,26,26,0.85); align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.dd-modal-overlay.open { display: flex; }
+.dd-modal-box {
+  background: var(--paper); border: 1.5px solid #ccc;
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.25);
+  max-width: 860px; width: 94%; max-height: 90vh;
+  overflow-y: auto; position: relative;
+}
+.dd-modal-tape { display: block; height: 18px; background: var(--tape); border-bottom: 1px solid rgba(175,215,164,0.5); }
+.dd-modal-close {
+  position: sticky; top: 0.8rem; float: right; margin: 0.8rem 0.8rem 0 0; z-index: 10;
+  width: 40px; height: 40px; background: var(--dark); color: var(--white);
+  border: none; cursor: pointer; font-size: 1.3rem; display: flex;
+  align-items: center; justify-content: center; font-family: 'Courier Prime', monospace;
+}
+.dd-modal-header { padding: 1.2rem 1.5rem 0.8rem; border-bottom: 1px dashed #ccc; }
+.dd-modal-season {
+  font-family: 'Courier Prime', monospace; font-size: 0.65rem;
+  letter-spacing: 0.18em; color: var(--green-dark); text-transform: uppercase; margin-bottom: 0.3rem;
+}
+.dd-modal-title {
+  font-family: 'Special Elite', cursive; font-size: 1.6rem; line-height: 1.2; margin-bottom: 0.2rem;
+}
+.dd-modal-brand {
+  font-family: 'Courier Prime', monospace; font-size: 0.75rem; color: var(--muted);
+}
+.dd-modal-img { display: block; width: 100%; height: auto; }
+.dd-modal-img-label {
+  font-family: 'Courier Prime', monospace; font-size: 0.6rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+  padding: 0.4rem 1.5rem; border-bottom: 1px dashed #ddd; background: #f4f4f2;
+}
+
+/* Fashion Design 텍스트 리스트 */
+.fd-list {
+  list-style: none; padding: 0; margin: 0.5rem 0 0; display: flex; flex-direction: column; gap: 1rem;
+}
+.fd-list li {
+  display: flex; gap: 0.6rem; align-items: flex-start;
+}
+.fd-bullet {
+  font-family: 'Courier Prime', monospace; color: var(--green-dark);
+  font-size: 1rem; line-height: 1.5; flex-shrink: 0;
+}
+.fd-text {
+  font-family: 'Courier Prime', monospace; font-size: 0.78rem;
+  color: #ccc; line-height: 1.65; letter-spacing: 0.02em;
+}
+.fd-text em {
+  font-style: normal; font-weight: 700; color: var(--green);
+}
+
+/* ── TIMELINE ── */
+.timeline {
+  display: flex; flex-direction: column;
+  padding: 1rem 0 1rem 0;
+  max-width: 100%;
+  width: 100%;
+}
+.tl-item {
+  display: grid;
+  grid-template-columns: 150px 36px 1fr;
+  gap: 0;
+  min-height: 120px;
+}
+.tl-left {
+  text-align: right;
+  padding-right: 1rem;
+  padding-top: 2px;
+}
+.tl-date {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.65rem;
+  color: var(--green-dark);
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-shadow: 0 2px 10px rgba(175,215,164,0.22);
+}
+.tl-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tl-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 2px solid var(--green);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+.tl-line {
+  width: 2px;
+  flex: 1;
+  background: rgba(175,215,164,0.25);
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+.tl-right {
+  padding: 0 0 2rem 0.8rem;
+  min-width: 0;
+}
+.tl-item--last .tl-right {
+  padding-bottom: 0;
+}
+.tl-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(175,215,164,0.2);
+  border-left: 3px solid var(--green);
+  padding: 1.4rem 2rem;
+  border-radius: 2px;
+  transition: background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.tl-box:hover {
+  background: rgba(175,215,164,0.13);
+  border-left-color: var(--green);
+}
+.tl-role {
+  font-family: 'Special Elite', cursive;
+  font-size: 1.15rem;
+  color: var(--dark);
+  background: var(--green);
+  display: inline-block;
+  padding: 1px 8px;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+.tl-company {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  color: var(--green-dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 12px rgba(175,215,164,0.25);
+}
+.tl-desc {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+.tl-tags {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+.tl-tag {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(175,215,164,0.35);
+  color: var(--green-dark);
+  padding: 2px 8px;
+}
+
+/* 모바일 핀치줌 - 딥다이브 & 아카이브 모달 이미지 */
+@media (max-width: 1024px) {
+  .arc-modal-img-wrap {
+    touch-action: pan-y;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+  }
+  .arc-modal-img-wrap img {
+    touch-action: pan-y;
+    pointer-events: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    will-change: transform;
+  }
+  .dd-modal-img-wrap {
+    touch-action: pan-y;
+    overflow: hidden;
+    position: relative;
+  }
+  .dd-modal-img {
+    touch-action: pan-y;
+    pointer-events: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    will-change: transform;
+  }
+  /* 모바일에서 돋보기 비활성화 */
+  .arc-magnifier { display: none !important; }
+}
+
+/* 모바일 경력 타임라인 레이아웃 */
+@media (max-width: 1024px) {
+  .tl-item {
+    grid-template-columns: 36px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "center left"
+      "center right";
+    min-height: unset;
+  }
+  .tl-center {
+    grid-area: center;
+    grid-row: 1 / 3;
+  }
+  .tl-left {
+    grid-area: left;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0.6rem;
+    padding-top: 4px;
+    padding-bottom: 0.3rem;
+  }
+  .tl-right {
+    grid-area: right;
+    padding-left: 0.6rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+  .tl-item--last .tl-right { padding-bottom: 0; }
+  .tl-box { padding: 1rem 1.2rem; }
+}
+</style>
+<script>
+(function() {
+  var meta = document.getElementById('viewport-meta');
+  function setViewport() {
+    var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    // iOS(아이폰)만 393px 고정, 안드로이드 등 나머지는 device-width 사용
+    if (isIOS && window.screen.width <= 430) {
+      meta.setAttribute('content', 'width=393, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+    } else {
+      meta.setAttribute('content', 'width=device-width, initial-scale=1.0, minimum-scale=1.0');
+    }
+  }
+  setViewport();
+})();
+</script>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="closeMobileMenu()">✕</button>
+  <a href="javascript:void(0)" onclick="goTo('deep-dive');closeMobileMenu()">Deep Dive</a>
+  <a href="javascript:void(0)" onclick="goTo('archive');closeMobileMenu()">Archive</a>
+  <a href="javascript:void(0)" onclick="goTo('skills');closeMobileMenu()">Skills</a>
+  <a href="javascript:void(0)" onclick="goTo('experience');closeMobileMenu()">Experience</a>
+  <a href="javascript:void(0)" onclick="goTo('contact');closeMobileMenu()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="javascript:void(0)" class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'});">PARK SANGIN <span class="logo-tag">DESIGNER</span></a>
+  <ul class="nav-links">
+    <li><a href="javascript:void(0)" onclick="goTo('deep-dive')">Deep Dive</a></li>
+    <li><a href="javascript:void(0)" onclick="goTo('archive')">Archive</a></li>
+    <li><a href="javascript:void(0)" onclick="goTo('skills')">Skills</a></li>
+    <li><a href="javascript:void(0)" onclick="goTo('experience')">Experience</a></li>
+    <li><a href="javascript:void(0)" onclick="goTo('contact')">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="openMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-stamp">Portfolio 2026 — Seoul, KR</div>
+    <h1>Fashion<br><span class="hl">Designer</span><br>& Maker.</h1>
+    <p class="hero-desc">
+      소재를 고르고, 선을 긋고, 옷이 되는 과정.<br>
+      니트부터 그래픽까지 — 손으로 만드는 모든 것을<br>
+      기록합니다.
+    </p>
+    <div class="btn-row">
+      <a href="javascript:void(0)" onclick="goTo('deep-dive')" class="btn-primary">View Work</a>
+      <a href="javascript:void(0)" onclick="goTo('contact')" class="btn-outline">Contact</a>
+    </div>
+  </div>
+  <div class="hero-notebook">
+
+    <div class="notebook-card">
+      <span class="tape-h"></span>
+      <div class="profile-placeholder" style="padding:0;background:#eee;">
+        <img src="images/img_00.jpg" alt="Park Sangin" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+      </div>
+      <div class="card-meta">
+        <strong>박상인 (Sangin Park)</strong><br>
+        1993.12.28<br>
+        010.5593.9535<br>
+        psi55939535@gmail.com<br>
+        @sangsangoz
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDEX BANNER -->
+<div class="index-banner">
+  <div class="index-item"><a href="javascript:void(0)" onclick="goTo('deep-dive')">Deep Dive<small>core item</small></a></div>
+  <div class="index-item"><a href="javascript:void(0)" onclick="goTo('archive')">Archive<small>23SS to Present</small></a></div>
+  <div class="index-item"><a href="javascript:void(0)" onclick="goTo('skills')">Technical Skills<small>Adobe · AI</small></a></div>
+  <div class="index-item"><a href="javascript:void(0)" onclick="goTo('experience')">Experience<small>Career Timeline</small></a></div>
+  <div class="index-item"><a href="javascript:void(0)" onclick="goTo('contact')">Contact</a></div>
+</div>
+
+<!-- DEEP DIVE -->
+<section class="deep-dive" id="deep-dive">
+  <div class="section-label">// Deep Dive — Core Items</div>
+  <h2 class="section-title">Featured Work</h2>
+  <div class="deep-stacks-row">
+
+    <!-- KNITWEAR STACK -->
+    <div class="deep-stack-group">
+      <div class="stack-label">Knitwear <span class="stack-label-tag">니트</span></div>
+      <div class="deep-grid stacked" id="deepGridKnit"
+           onclick="expandStack('deepGridKnit','stackHintKnit','collapseHintKnit',event)">
+        <div class="deep-card" onclick="event.stopPropagation(); openDDModal('dd-modal-ny-cowichan')" style="cursor:pointer;">
+          <div class="deep-img" style="padding:0;overflow:hidden;">
+            <div class="deep-img-label">24 S/S</div>
+            <img src="images/img_01.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="deep-info">
+            <div>
+              <div class="deep-season">EBBETS FIELD · 2024 S/S</div>
+              <div class="deep-title">NY Black Yankees<br>Knit Zip-up</div>
+              <div class="deep-brand">Ebbets Field</div>
+            </div>
+            <div><div class="deep-tags"><span class="tag">Knitwear</span><span class="tag">5GG</span><span class="tag">Zip-up</span></div></div>
+          </div>
+        </div>
+
+        <div class="deep-card" onclick="event.stopPropagation(); openDDModal('dd-modal-arch-logo')" style="cursor:pointer;">
+          <div class="deep-img" style="padding:0;overflow:hidden;">
+            <div class="deep-img-label">25 F/W</div>
+            <img src="images/img_02.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="deep-info">
+            <div>
+              <div class="deep-season">COVERNAT · 2025 F/W</div>
+              <div class="deep-title">Arch Logo Knit<br>Sweater</div>
+              <div class="deep-brand">Covernat</div>
+            </div>
+            <div><div class="deep-tags"><span class="tag">Knitwear</span><span class="tag">12GG</span><span class="tag">Bird Eye Jacquard</span></div></div>
+          </div>
+        </div>
+
+        <div class="deep-card" onclick="event.stopPropagation(); openDDModal('dd-modal-rugby-knit')" style="cursor:pointer;">
+          <div class="deep-img" style="padding:0;overflow:hidden;">
+            <div class="deep-img-label">26 S/S</div>
+            <img src="images/img_03.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="deep-info">
+            <div>
+              <div class="deep-season">COVERNAT · 2026 S/S</div>
+              <div class="deep-title">Rugby S/S<br>Knit Polo</div>
+              <div class="deep-brand">Covernat</div>
+            </div>
+            <div><div class="deep-tags"><span class="tag">Knitwear</span><span class="tag">7GG</span><span class="tag">Bouclé Yarn</span><span class="tag">Rugby</span><span class="tag">Stripe</span></div></div>
+          </div>
+        </div>
+
+        <div class="deep-card" onclick="event.stopPropagation(); openDDModal('dd-modal-kanata-cowichan')" style="cursor:pointer;">
+          <div class="deep-img" style="padding:0;overflow:hidden;">
+            <div class="deep-img-label">26 F/W</div>
+            <img src="images/img_04.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="deep-info">
+            <div>
+              <div class="deep-season">COVERNAT × KANATA · 2026 F/W</div>
+              <div class="deep-title">Kanata Original<br>Cowichan Zip-up</div>
+              <div class="deep-brand">Covernat × Kanata</div>
+            </div>
+            <div><div class="deep-tags"><span class="tag">Knitwear</span><span class="tag">Cowichan</span><span class="tag">Handknit</span><span class="tag">Collab</span></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="stack-hint" id="stackHintKnit">↑ Click to expand</p>
+      <p class="stack-hint collapse-mode hidden" id="collapseHintKnit"
+         onclick="collapseStack('deepGridKnit','stackHintKnit','collapseHintKnit','deep-dive')">↑ Click to collapse</p>
+    </div>
+
+    <!-- JERSEY & WOVEN STACK -->
+    <div class="deep-stack-group">
+      <div class="stack-label">Jersey &amp; Woven <span class="stack-label-tag">저지·우븐</span></div>
+      <div class="deep-grid stacked" id="deepGridJersey"
+           onclick="expandStack('deepGridJersey','stackHintJersey','collapseHintJersey',event)">
+        <div class="deep-card" onclick="event.stopPropagation(); openDDModal('dd-modal-blockcore-tee')" style="cursor:pointer;">
+          <div class="deep-img" style="padding:0;overflow:hidden;">
+            <div class="deep-img-label">25/26 S/S</div>
+            <img src="images/img_05.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="deep-info">
+            <div>
+              <div class="deep-season">COVERNAT · 25SS / 26SS</div>
+              <div class="deep-title">Blockcore<br>Football T-Shirt</div>
+              <div class="deep-brand">Covernat</div>
+            </div>
+            <div><div class="deep-tags"><span class="tag">Jersey</span><span class="tag">Blockcore</span><span class="tag">Football</span></div></div>
+          </div>
+        </div>
+
+        <div class="deep-card" onclick="event.stopPropagation(); openDDModal('dd-modal-denim-hood')" style="cursor:pointer;">
+          <div class="deep-img" style="padding:0;overflow:hidden;">
+            <div class="deep-img-label">26 S/S</div>
+            <img src="images/img_06.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="deep-info">
+            <div>
+              <div class="deep-season">COVERNAT · 2026 S/S</div>
+              <div class="deep-title">Arch Logo<br>Denim Hood Shirt</div>
+              <div class="deep-brand">Covernat</div>
+            </div>
+            <div><div class="deep-tags"><span class="tag">Woven</span><span class="tag">Denim</span><span class="tag">Hood</span><span class="tag">Chain St.</span></div></div>
+          </div>
+        </div>
+
+        <div class="deep-card" onclick="event.stopPropagation(); openDDModal('dd-modal-ma1')" style="cursor:pointer;">
+          <div class="deep-img" style="padding:0;overflow:hidden;">
+            <div class="deep-img-label">26 S/S</div>
+            <img src="images/img_07.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="deep-info">
+            <div>
+              <div class="deep-season">COVERNAT · 2026 S/S</div>
+              <div class="deep-title">MA-1<br>Jacket</div>
+              <div class="deep-brand">Covernat</div>
+            </div>
+            <div><div class="deep-tags"><span class="tag">Woven</span><span class="tag">MA-1</span><span class="tag">Nylon</span></div></div>
+          </div>
+        </div>
+
+        <div class="deep-card" onclick="event.stopPropagation(); openDDModal('dd-modal-sherpa-hood')" style="cursor:pointer;">
+          <div class="deep-img" style="padding:0;overflow:hidden;">
+            <div class="deep-img-label">25 F/W</div>
+            <img src="images/img_08.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="deep-info">
+            <div>
+              <div class="deep-season">COVERNAT · 2025 F/W</div>
+              <div class="deep-title">AOP Sherpa<br>Hood Jacket</div>
+              <div class="deep-brand">Covernat</div>
+            </div>
+            <div><div class="deep-tags"><span class="tag">Sherpa</span><span class="tag">AOP</span><span class="tag">Hood</span></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="stack-hint" id="stackHintJersey">↑ Click to expand</p>
+      <p class="stack-hint collapse-mode hidden" id="collapseHintJersey"
+         onclick="collapseStack('deepGridJersey','stackHintJersey','collapseHintJersey','deep-dive')">↑ Click to collapse</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="dd-modal-overlay" id="dd-modal-ny-cowichan" onclick="closeDDModalOutside(event,'dd-modal-ny-cowichan')">
+  <div class="dd-modal-box">
+    <span class="dd-modal-tape"></span>
+    <button class="dd-modal-close" onclick="closeDDModal('dd-modal-ny-cowichan')">✕</button>
+    <div class="dd-modal-header">
+      <div class="dd-modal-season">EBBETS FIELD · 2024 S/S</div>
+      <div class="dd-modal-title">NY Black Yankees<br>Knit Zip-up</div>
+      <div class="dd-modal-brand">Ebbets Field &nbsp;|&nbsp; 5GG · Zip-up</div>
+    </div>
+    <div class="dd-modal-desc" style="padding:0.8rem 1.2rem;background:#f5f7f4;border-left:3px solid var(--green);margin:1rem 0;font-family:'Courier Prime',monospace;font-size:0.75rem;color:#555;line-height:1.6;">
+      24 S/S 시즌 Ebbets Field 기획 아이템. Cowichan 기법의 니트 집업으로 NY Black Yankees 헤리티지를 현대적으로 재해석.
+    </div>
+    <div class="dd-modal-img-label">— PRODUCT</div>
+    <img class="dd-modal-img" src="images/img_09.jpg">
+    <div class="dd-modal-img-label">— DETAIL</div>
+    <img class="dd-modal-img" src="images/img_01.jpg0">
+    <div class="dd-modal-img-label">— TECH PACK</div>
+    <img class="dd-modal-img" src="images/img_01.jpg1">
+  </div>
+</div>
+
+<!-- DD MODAL: Arch Logo Knit Sweater -->
+<div class="dd-modal-overlay" id="dd-modal-arch-logo" onclick="closeDDModalOutside(event,'dd-modal-arch-logo')">
+  <div class="dd-modal-box">
+    <span class="dd-modal-tape"></span>
+    <button class="dd-modal-close" onclick="closeDDModal('dd-modal-arch-logo')">✕</button>
+    <div class="dd-modal-header">
+      <div class="dd-modal-season">COVERNAT · 2025 F/W</div>
+      <div class="dd-modal-title">Arch Logo Knit Sweater</div>
+      <div class="dd-modal-brand">Covernat &nbsp;|&nbsp; 12GG · Bird Eye Jacquard</div>
+    </div>
+    <div class="dd-modal-desc" style="padding:0.8rem 1.2rem;background:#f5f7f4;border-left:3px solid var(--green);margin:1rem 0;font-family:'Courier Prime',monospace;font-size:0.75rem;color:#555;line-height:1.6;">
+      25 F/W 시즌 니트 카테고리 판매량 1위 아이템
+    </div>
+    <div class="dd-modal-img-label">— PRODUCT</div>
+    <img class="dd-modal-img" src="images/img_01.jpg2">
+    <div class="dd-modal-img-label">— DETAIL</div>
+    <img class="dd-modal-img" src="images/img_01.jpg3">
+    <div class="dd-modal-img-label">— TECH PACK</div>
+    <img class="dd-modal-img" src="images/img_01.jpg4">
+  </div>
+</div>
+
+<!-- DD MODAL: Rugby S/S Knit Polo -->
+<div class="dd-modal-overlay" id="dd-modal-rugby-knit" onclick="closeDDModalOutside(event,'dd-modal-rugby-knit')">
+  <div class="dd-modal-box">
+    <span class="dd-modal-tape"></span>
+    <button class="dd-modal-close" onclick="closeDDModal('dd-modal-rugby-knit')">✕</button>
+    <div class="dd-modal-header">
+      <div class="dd-modal-season">COVERNAT · 2026 S/S</div>
+      <div class="dd-modal-title">Rugby S/S Knit Polo</div>
+      <div class="dd-modal-brand">Covernat &nbsp;|&nbsp; 7GG · Bouclé Yarn · Rugby · Stripe</div>
+    </div>
+    <div class="dd-modal-desc" style="padding:0.8rem 1.2rem;background:#f5f7f4;border-left:3px solid var(--green);margin:1rem 0;font-family:'Courier Prime',monospace;font-size:0.75rem;color:#555;line-height:1.6;">
+      26 S/S 시즌 니트 카테고리 판매량 1위 아이템
+    </div>
+    <div class="dd-modal-img-label">— PRODUCT</div>
+    <img class="dd-modal-img" src="images/img_01.jpg5">
+    <div class="dd-modal-img-label">— DETAIL</div>
+    <img class="dd-modal-img" src="images/img_01.jpg6">
+    <div class="dd-modal-img-label">— TECH PACK</div>
+    <img class="dd-modal-img" src="images/img_01.jpg7">
+  </div>
+</div>
+
+<!-- DD MODAL: Kanata Original Cowichan -->
+<div class="dd-modal-overlay" id="dd-modal-kanata-cowichan" onclick="closeDDModalOutside(event,'dd-modal-kanata-cowichan')">
+  <div class="dd-modal-box">
+    <span class="dd-modal-tape"></span>
+    <button class="dd-modal-close" onclick="closeDDModal('dd-modal-kanata-cowichan')">✕</button>
+    <div class="dd-modal-header">
+      <div class="dd-modal-season">COVERNAT × KANATA · 2026 F/W</div>
+      <div class="dd-modal-title">Kanata Original Cowichan Zip-up</div>
+      <div class="dd-modal-brand">Covernat × Kanata &nbsp;|&nbsp; 3~4GG · Shetland Wool · Handknit</div>
+    </div>
+    <div class="dd-modal-desc" style="padding:0.8rem 1.2rem;background:#f5f7f4;border-left:3px solid var(--green);margin:1rem 0;font-family:'Courier Prime',monospace;font-size:0.75rem;color:#555;line-height:1.6;">
+      캐나다 핸드니트 브랜드 Kanata와의 콜라보레이션 아이템. 발매 예정.
+    </div>
+    <div class="dd-modal-img-label">— PRODUCT</div>
+    <img class="dd-modal-img" src="images/img_01.jpg8">
+    <div class="dd-modal-img-label">— DETAIL</div>
+    <img class="dd-modal-img" src="images/img_01.jpg9">
+    <div class="dd-modal-img-label">— TECH PACK</div>
+    <img class="dd-modal-img" src="images/img_02.jpg0">
+  </div>
+</div>
+
+<!-- DD MODAL: Blockcore Football T-Shirt -->
+<div class="dd-modal-overlay" id="dd-modal-blockcore-tee" onclick="closeDDModalOutside(event,'dd-modal-blockcore-tee')">
+  <div class="dd-modal-box">
+    <span class="dd-modal-tape"></span>
+    <button class="dd-modal-close" onclick="closeDDModal('dd-modal-blockcore-tee')">✕</button>
+    <div class="dd-modal-header">
+      <div class="dd-modal-season">COVERNAT · 25SS / 26SS</div>
+      <div class="dd-modal-title">Blockcore Football T-Shirt</div>
+      <div class="dd-modal-brand">Covernat &nbsp;|&nbsp; Jersey · Blockcore</div>
+    </div>
+    <div class="dd-modal-desc" style="padding:0.8rem 1.2rem;background:#f5f7f4;border-left:3px solid var(--green);margin:1rem 0;font-family:'Courier Prime',monospace;font-size:0.75rem;color:#555;line-height:1.6;">
+      25 S/S 악센트 아이템으로 출시, 판매 호조로 26 S/S 캐리오버 아이템으로 업데이트
+    </div>
+    <div class="dd-modal-img-label">— PRODUCT</div>
+    <img class="dd-modal-img" src="images/img_02.jpg1">
+    <div class="dd-modal-img-label">— DETAIL</div>
+    <img class="dd-modal-img" src="images/img_02.jpg2">
+    <div class="dd-modal-img-label">— TECH PACK</div>
+    <img class="dd-modal-img" src="images/img_02.jpg3">
+  </div>
+</div>
+
+<!-- DD MODAL: Arch Logo Denim Hood Shirt -->
+<div class="dd-modal-overlay" id="dd-modal-denim-hood" onclick="closeDDModalOutside(event,'dd-modal-denim-hood')">
+  <div class="dd-modal-box">
+    <span class="dd-modal-tape"></span>
+    <button class="dd-modal-close" onclick="closeDDModal('dd-modal-denim-hood')">✕</button>
+    <div class="dd-modal-header">
+      <div class="dd-modal-season">COVERNAT · 2026 S/S</div>
+      <div class="dd-modal-title">Arch Logo Denim Hood Shirt</div>
+      <div class="dd-modal-brand">Covernat &nbsp;|&nbsp; Woven · Denim · Chain Stitch</div>
+    </div>
+    <div class="dd-modal-desc" style="padding:0.8rem 1.2rem;background:#f5f7f4;border-left:3px solid var(--green);margin:1rem 0;font-family:'Courier Prime',monospace;font-size:0.75rem;color:#555;line-height:1.6;">
+      26 S/S 발매 초기 솔드아웃
+    </div>
+    <div class="dd-modal-img-label">— PRODUCT</div>
+    <img class="dd-modal-img" src="images/img_02.jpg4">
+    <div class="dd-modal-img-label">— DETAIL</div>
+    <img class="dd-modal-img" src="images/img_02.jpg5">
+    <div class="dd-modal-img-label">— TECH PACK</div>
+    <img class="dd-modal-img" src="images/img_02.jpg6">
+  </div>
+</div>
+
+<!-- DD MODAL: MA-1 Bomber Jacket -->
+<div class="dd-modal-overlay" id="dd-modal-ma1" onclick="closeDDModalOutside(event,'dd-modal-ma1')">
+  <div class="dd-modal-box">
+    <span class="dd-modal-tape"></span>
+    <button class="dd-modal-close" onclick="closeDDModal('dd-modal-ma1')">✕</button>
+    <div class="dd-modal-header">
+      <div class="dd-modal-season">COVERNAT · 2026 S/S</div>
+      <div class="dd-modal-title">MA-1 Jacket</div>
+      <div class="dd-modal-brand">Covernat &nbsp;|&nbsp; Woven · Nylon</div>
+    </div>
+    <div class="dd-modal-img-label">— PRODUCT</div>
+    <img class="dd-modal-img" src="images/img_02.jpg7">
+    <div class="dd-modal-img-label">— DETAIL</div>
+    <img class="dd-modal-img" src="images/img_02.jpg8">
+    <div class="dd-modal-img-label">— TECH PACK</div>
+    <img class="dd-modal-img" src="images/img_02.jpg9">
+  </div>
+</div>
+
+<!-- DD MODAL: AOP Sherpa Hood Jacket -->
+<div class="dd-modal-overlay" id="dd-modal-sherpa-hood" onclick="closeDDModalOutside(event,'dd-modal-sherpa-hood')">
+  <div class="dd-modal-box">
+    <span class="dd-modal-tape"></span>
+    <button class="dd-modal-close" onclick="closeDDModal('dd-modal-sherpa-hood')">✕</button>
+    <div class="dd-modal-header">
+      <div class="dd-modal-season">COVERNAT · 2025 F/W</div>
+      <div class="dd-modal-title">AOP Sherpa Hood Jacket</div>
+      <div class="dd-modal-brand">Covernat &nbsp;|&nbsp; Sherpa · AOP</div>
+    </div>
+    <div class="dd-modal-img-label">— PRODUCT</div>
+    <img class="dd-modal-img" src="images/img_03.jpg0">
+    <div class="dd-modal-img-label">— DETAIL</div>
+    <img class="dd-modal-img" src="images/img_03.jpg1">
+    <div class="dd-modal-img-label">— TECH PACK</div>
+    <img class="dd-modal-img" src="images/img_03.jpg2">
+  </div>
+</div>
+
+
+
+<section class="archive-section" id="archive">
+  <div class="section-label">// Archive — 23SS to Present</div>
+
+  <div class="archive-header">
+    <div>
+      <h2 class="section-title">Season Archive</h2>
+      <div class="archive-count">총 <strong id="arcVisibleCount">9</strong>개의 시즌 아카이브</div>
+    </div>
+    <div class="arc-view-toggle">
+      <button class="arc-view-btn active" id="btnGrid" onclick="setArcView('grid')" title="그리드 뷰">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="0" y="0" width="6" height="6" fill="currentColor"/><rect x="8" y="0" width="6" height="6" fill="currentColor"/><rect x="0" y="8" width="6" height="6" fill="currentColor"/><rect x="8" y="8" width="6" height="6" fill="currentColor"/></svg>
+      </button>
+      <button class="arc-view-btn" id="btnTimeline" onclick="setArcView('timeline')" title="타임라인 뷰">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="1" width="10" height="2" fill="currentColor"/><rect x="4" y="6" width="10" height="2" fill="currentColor"/><rect x="4" y="11" width="10" height="2" fill="currentColor"/><circle cx="1.5" cy="2" r="1.5" fill="currentColor"/><circle cx="1.5" cy="7" r="1.5" fill="currentColor"/><circle cx="1.5" cy="12" r="1.5" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- 필터 탭 -->
+  <div class="arc-filters">
+    <button class="arc-filter-btn active" onclick="filterArchive('all', this)">All</button>
+    <button class="arc-filter-btn" onclick="filterArchive('covernat', this)">COVERNAT</button>
+    <button class="arc-filter-btn" onclick="filterArchive('ebbets', this)">EBBETS FIELD</button>
+    <button class="arc-filter-btn" onclick="filterArchive('fw', this)">F/W</button>
+    <button class="arc-filter-btn" onclick="filterArchive('ss', this)">S/S</button>
+  </div>
+
+  <!-- 그리드 뷰 -->
+  <div class="archive-grid" id="arcGrid">
+
+    <div class="archive-card" data-brand="covernat" data-season="ss" onclick="openArcModal('arcModal27SS')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">27 S/S</div>
+          <img src="images/img_03.jpg3" alt="COVERNAT 27SS" style="width:100%;height:100%;object-fit:contain;object-position:center center;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— COVERNAT / B.CAVE</div>
+          <div class="arc-title">2027 S/S Season</div>
+          <div class="arc-meta">Outer · Knitwear · Hoodie Zip Up</div>
+          <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">S/S</span></div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="archive-card" data-brand="covernat" data-season="fw" onclick="openArcModal('arcModal26FW')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">26 F/W</div>
+          <img src="images/img_03.jpg4" alt="COVERNAT 26FW" style="width:100%;height:100%;object-fit:contain;object-position:center center;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— COVERNAT / B.CAVE</div>
+          <div class="arc-title">2026 F/W Season</div>
+          <div class="arc-meta">Technical Fabric · Wormon Line · Knitwear · Kanata Collab</div>
+          <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">F/W</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-card" data-brand="covernat" data-season="ss" onclick="openArcModal('arcModal26SS')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">26 S/S</div>
+          <img src="images/img_03.jpg5" alt="COVERNAT 26SS" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— COVERNAT / B.CAVE</div>
+          <div class="arc-title">2026 S/S Season</div>
+          <div class="arc-meta">Outer · Shirts · Knitwear · Arch Logo</div>
+          <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">S/S</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-card" data-brand="covernat" data-season="fw" onclick="openArcModal('arcModal25FW')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">25 F/W</div>
+          <img src="images/img_03.jpg6" alt="COVERNAT 25FW" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— COVERNAT / B.CAVE</div>
+          <div class="arc-title">2025 F/W Season</div>
+          <div class="arc-meta">Wormon Line · Arch Logo · Knitwear</div>
+          <div class="arc-tags"><span class="arc-tag">Fleece</span><span class="arc-tag">Knitwear</span><span class="arc-tag">F/W</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-card" data-brand="covernat" data-season="ss" onclick="openArcModal('arcModal25SS')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">25 S/S</div>
+          <img src="images/img_03.jpg7" alt="COVERNAT 25SS" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— COVERNAT / B.CAVE</div>
+          <div class="arc-title">2025 S/S Season</div>
+          <div class="arc-meta">Denim · 1-Material Set Up · Blockcore · Logo Tee</div>
+          <div class="arc-tags"><span class="arc-tag">Denim</span><span class="arc-tag">Blockcore</span><span class="arc-tag">S/S</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-card" data-brand="covernat" data-season="fw" onclick="openArcModal('arcModal24FW')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">24 F/W</div>
+          <img src="images/img_03.jpg8" alt="COVERNAT 24FW" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— COVERNAT / B.CAVE</div>
+          <div class="arc-title">2024 F/W Season</div>
+          <div class="arc-meta">Woven Top · Symbol Logo Line</div>
+          <div class="arc-tags"><span class="arc-tag">Woven</span><span class="arc-tag">Jersey</span><span class="arc-tag">F/W</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-card" data-brand="ebbets" data-season="ss" onclick="openArcModal('arcModal24SS')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">24 S/S</div>
+          <img src="images/img_03.jpg9" alt="EBBETS 24SS" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— EBBETS FIELD / B.CAVE</div>
+          <div class="arc-title">2024 S/S Season</div>
+          <div class="arc-meta">Varsity Jacket · Knitwear · Jersey · Women Line · Stripe Tee</div>
+          <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">Women Line</span><span class="arc-tag">S/S</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-card" data-brand="ebbets" data-season="fw" onclick="openArcModal('arcModal23FW')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">23 F/W</div>
+          <img src="images/img_04.jpg0" alt="EBBETS 23FW" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— EBBETS FIELD / B.CAVE</div>
+          <div class="arc-title">2023 F/W Season</div>
+          <div class="arc-meta">Outer · Knitwear · Jersey · Accessories</div>
+          <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">F/W</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-card" data-brand="ebbets" data-season="ss" onclick="openArcModal('arcModal23SS')">
+      <div class="arc-inner">
+        <span class="arc-tape"></span>
+        <div class="arc-img">
+          <div class="arc-season-tag">23 S/S</div>
+          <img src="images/img_04.jpg1" alt="EBBETS 23SS" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="arc-info">
+          <div class="arc-num">— EBBETS FIELD / B.CAVE</div>
+          <div class="arc-title">2023 S/S Season</div>
+          <div class="arc-meta">Graphic Tees · Blockcore</div>
+          <div class="arc-tags"><span class="arc-tag">Graphics</span><span class="arc-tag">Blockcore</span><span class="arc-tag">S/S</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end archive-grid -->
+
+  <!-- 타임라인 뷰 -->
+  <div class="archive-timeline" id="arcTimeline">
+
+    <div class="timeline-brand-block">
+      <div class="timeline-brand-label">COVERNAT / B.CAVE <span>2024.05 — Present</span></div>
+      <div class="timeline-rows">
+        <div class="timeline-item" onclick="openArcModal('arcModal26FW')">
+          <div class="tl-season">26 F/W</div>
+          <div class="tl-body">
+            <div class="tl-title">2026 F/W Season</div>
+            <div class="tl-desc">캐나다 니트 브랜드 Kanata와의 콜라보. 핸드니트 카우찬 재킷, 풀오버 스웨터 등 헤리티지 니트웨어 중심.</div>
+            <div class="tl-chips"><span class="tl-chip">Knitwear</span><span class="tl-chip">Collab</span><span class="tl-chip">Cowichan</span><span class="tl-chip">Handknit</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" onclick="openArcModal('arcModal26SS')">
+          <div class="tl-season">26 S/S</div>
+          <div class="tl-body">
+            <div class="tl-title">2026 S/S Season</div>
+            <div class="tl-desc">Skipper Polo 니트, A100 쇼츠, 블록 코어 아이템 중심. 캐주얼 스트리트와 스포티 감성의 시즌 라인.</div>
+            <div class="tl-chips"><span class="tl-chip">Polo Knit</span><span class="tl-chip">Core</span><span class="tl-chip">Sportswear</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" onclick="openArcModal('arcModal25FW')">
+          <div class="tl-season">25 F/W</div>
+          <div class="tl-body">
+            <div class="tl-title">2025 F/W Season</div>
+            <div class="tl-desc">카우찬 니트, 수비니어 재킷, 헤비웨이트 플리스 등 볼륨감 있는 아우터 중심 시즌.</div>
+            <div class="tl-chips"><span class="tl-chip">Cowichan</span><span class="tl-chip">Souvenir</span><span class="tl-chip">Heavy Knit</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" onclick="openArcModal('arcModal25SS')">
+          <div class="tl-season">25 S/S</div>
+          <div class="tl-body">
+            <div class="tl-title">2025 S/S Season</div>
+            <div class="tl-desc">폴로 니트, 콜리지에이트 그래픽 티셔츠, 써머 니트 등 봄여름 코어 아이템 구성.</div>
+            <div class="tl-chips"><span class="tl-chip">Polo</span><span class="tl-chip">Collegiate</span><span class="tl-chip">Graphics</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" onclick="openArcModal('arcModal24FW')">
+          <div class="tl-season">24 F/W</div>
+          <div class="tl-body">
+            <div class="tl-title">2024 F/W Season</div>
+            <div class="tl-desc">합류 첫 시즌. 니트웨어, 아우터, 코어 아이템 전반을 담당하며 브랜드 스타일에 적응.</div>
+            <div class="tl-chips"><span class="tl-chip">Knitwear</span><span class="tl-chip">Outerwear</span><span class="tl-chip">Core Items</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-brand-block">
+      <div class="timeline-brand-label">EBBETS FIELD / B.CAVE <span>2022.12 — 2024.05</span></div>
+      <div class="timeline-rows">
+        <div class="timeline-item" onclick="openArcModal('arcModal24SS')">
+          <div class="tl-season">24 S/S</div>
+          <div class="tl-body">
+            <div class="tl-title">2024 S/S Season</div>
+            <div class="tl-desc">라글란 셔츠, 베이스볼 저지, 스트라이프 티셔츠 등 베이스볼 헤리티지 감성 라인.</div>
+            <div class="tl-chips"><span class="tl-chip">Raglan</span><span class="tl-chip">Baseball</span><span class="tl-chip">Stripe</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" onclick="openArcModal('arcModal23FW')">
+          <div class="tl-season">23 F/W</div>
+          <div class="tl-body">
+            <div class="tl-title">2023 F/W Season</div>
+            <div class="tl-desc">후디, 플리스 자켓, 캡 등 액세서리까지 포함한 풀 라인업. 미국 빈티지 스포츠 감성 강조.</div>
+            <div class="tl-chips"><span class="tl-chip">Hoodies</span><span class="tl-chip">Fleece</span><span class="tl-chip">Accessories</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" onclick="openArcModal('arcModal23SS')">
+          <div class="tl-season">23 S/S</div>
+          <div class="tl-body">
+            <div class="tl-title">2023 S/S Season</div>
+            <div class="tl-desc">입사 첫 시즌. 그래픽 티셔츠, 니트웨어 포함 풀 라인 참여. 브랜드 DNA 체득.</div>
+            <div class="tl-chips"><span class="tl-chip">Graphic Tees</span><span class="tl-chip">Knitwear</span><span class="tl-chip">Full Line</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end archive-timeline -->
+
+</section>
+
+<!-- ARCHIVE MODALS -->
+
+<div class="arc-modal" id="arcModal27SS" onclick="closeArcModalOutside(event,'arcModal27SS')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal27SS')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">COVERNAT · B.CAVE · 2027 S/S</div>
+      <div class="arc-modal-title">2027 S/S Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">24 Styles</div>
+      <div class="arc-modal-brand">COVERNAT / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_04.jpg2" alt="COVERNAT 27SS" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        
+      </div>
+      <div class="arc-modal-desc">
+        커버낫 여섯 번째 시즌으로 현재 품평 진행 중. 우븐 아우터 외 니트 전담.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Outer</span>
+        <span class="arc-modal-item">Knitwear</span>
+        <span class="arc-modal-item">Women Line</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">S/S</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arc-modal" id="arcModal26FW" onclick="closeArcModalOutside(event,'arcModal26FW')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal26FW')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">COVERNAT × KANATA · B.CAVE · 2026 F/W</div>
+      <div class="arc-modal-title">2026 F/W Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">42 Styles &nbsp;·&nbsp; 92 SKU</div>
+      <div class="arc-modal-brand">COVERNAT / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_04.jpg3" alt="COVERNAT 26FW" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        
+      </div>
+      <div class="arc-modal-desc">
+        COVERNAT 다섯 번째 시즌으로 현재 진행 중. 품평 샘플부터 메인 생산까지 전 과정 핸들링. Pertex·Primaloft·Polartec 등 특수 소재를 활용한 테크니컬 아이템 담당. 25 F/W에 이어 Wormon 라인을 연속 담당하며 일정을 선진행으로 앞당겨 기획·디자인 진행. 니트 아이템 전담으로 시즌 내 모든 니트를 담당. 캐나다 핸드니트 브랜드 Kanata와의 콜라보레이션도 진행.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Technical Fabric</span>
+        <span class="arc-modal-item">Wormon Line</span>
+        <span class="arc-modal-item">Knitwear</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">F/W</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arc-modal" id="arcModal26SS" onclick="closeArcModalOutside(event,'arcModal26SS')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal26SS')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">COVERNAT · B.CAVE · 2026 S/S</div>
+      <div class="arc-modal-title">2026 S/S Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">32 Styles &nbsp;·&nbsp; 81 SKU</div>
+      <div class="arc-modal-brand">COVERNAT / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_04.jpg4" alt="season archive" style="width:100%;height:100%;object-fit:contain;background:#f0f0ee;"></div>
+      </div>
+      <div class="arc-modal-desc">
+        COVERNAT 네 번째 시즌. 품평 샘플부터 메인 생산까지 전 과정 핸들링. 수베니어 재킷·MA-1 등 봄 시즌 아우터와 데님·체크 소재의 캐주얼 후드 셔츠를 담당. 25 F/W에 이어 메인 IP인 아치 로고 라인과 니트 아이템을 연속 담당.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Spring Outer</span>
+        <span class="arc-modal-item">Knitwear</span>
+        <span class="arc-modal-item">Shirts</span>
+        <span class="arc-modal-item">Arch Logo</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">S/S</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arc-modal" id="arcModal25FW" onclick="closeArcModalOutside(event,'arcModal25FW')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal25FW')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">COVERNAT · B.CAVE · 2025 F/W</div>
+      <div class="arc-modal-title">2025 F/W Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">23 Styles &nbsp;·&nbsp; 52 SKU</div>
+      <div class="arc-modal-brand">COVERNAT / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_04.jpg5" alt="season archive" style="width:100%;height:100%;object-fit:contain;background:#f0f0ee;"></div>
+      </div>
+      <div class="arc-modal-desc">
+        COVERNAT 세 번째 시즌. 품평 샘플부터 메인 생산까지 전 과정 핸들링. COVERNAT IMC 아이템인 Wormon 라인(쉐르파·플리스)을 전담하여 제품 구성부터 디자인까지 진행. COVERNAT의 메인 IP 중 하나인 아치 로고 라인과 니트 아이템도 담당.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Wormon Line</span>
+        <span class="arc-modal-item">Arch Logo</span>
+        <span class="arc-modal-item">Knitwear</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Fleece</span><span class="arc-tag">Knitwear</span><span class="arc-tag">F/W</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arc-modal" id="arcModal25SS" onclick="closeArcModalOutside(event,'arcModal25SS')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal25SS')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">COVERNAT · B.CAVE · 2025 S/S</div>
+      <div class="arc-modal-title">2025 S/S Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">38 Styles &nbsp;·&nbsp; 99 SKU</div>
+      <div class="arc-modal-brand">COVERNAT / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_04.jpg6" alt="season archive" style="width:100%;height:100%;object-fit:contain;background:#f0f0ee;"></div>
+      </div>
+      <div class="arc-modal-desc">
+        COVERNAT 두 번째 시즌. 품평 샘플부터 메인 생산까지 전 과정을 핸들링. 블록코어 라인을 전담하여 디자인부터 제품 구성까지 진행했으며, 1-Material 라인으로 단일 원단 기반의 우븐 셋업과 냉감 원단 셋업 라인을 기획·구성.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Denim Shirts</span>
+        <span class="arc-modal-item">1-Material Set Up</span>
+        <span class="arc-modal-item">Blockcore</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Denim</span><span class="arc-tag">Blockcore</span><span class="arc-tag">S/S</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arc-modal" id="arcModal24FW" onclick="closeArcModalOutside(event,'arcModal24FW')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal24FW')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">COVERNAT · B.CAVE · 2024 F/W</div>
+      <div class="arc-modal-title">2024 F/W Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">3 Styles &nbsp;·&nbsp; 8 SKU</div>
+      <div class="arc-modal-brand">COVERNAT / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_04.jpg7" alt="season archive" style="width:100%;height:100%;object-fit:contain;background:#f0f0ee;"></div>
+      </div>
+      <div class="arc-modal-desc">
+        COVERNAT 합류 첫 시즌. 브랜드 신규 심볼 로고를 활용한 스웻 라인을 전개하고, 블록코어 무드의 우븐 탑을 스팟 아이템으로 진행.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Woven Top</span>
+        <span class="arc-modal-item">Symbol Logo Line</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Woven</span><span class="arc-tag">Jersey</span><span class="arc-tag">F/W</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arc-modal" id="arcModal24SS" onclick="closeArcModalOutside(event,'arcModal24SS')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal24SS')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">EBBETS FIELD · B.CAVE · 2024 S/S</div>
+      <div class="arc-modal-title">2024 S/S Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">36 Styles &nbsp;·&nbsp; 79 SKU</div>
+      <div class="arc-modal-brand">EBBETS FIELD / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_04.jpg8" alt="season archive" style="width:100%;height:100%;object-fit:contain;background:#f0f0ee;"></div>
+      </div>
+      <div class="arc-modal-desc">
+        Ebbets Field 세 번째 시즌. 드랍 방식의 스팟 전개로 기획부터 메인 생산까지 전 과정을 핸들링. 시장 흐름을 분석해 브랜드에 필요한 아이템을 선별·기획하여 발매.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Varsity Jacket</span>
+        <span class="arc-modal-item">Knit Zip-up</span>
+        <span class="arc-modal-item">Women Line</span>
+        <span class="arc-modal-item">Accessories</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">Women Line</span><span class="arc-tag">S/S</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arc-modal" id="arcModal23FW" onclick="closeArcModalOutside(event,'arcModal23FW')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal23FW')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">EBBETS FIELD · B.CAVE · 2023 F/W</div>
+      <div class="arc-modal-title">2023 F/W Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">25 Styles &nbsp;·&nbsp; 42 SKU</div>
+      <div class="arc-modal-brand">EBBETS FIELD / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_04.jpg9" alt="season archive" style="width:100%;height:100%;object-fit:contain;background:#f0f0ee;"></div>
+      </div>
+      <div class="arc-modal-desc">
+        Ebbets Field 두 번째 시즌. 품평 샘플부터 메인 생산까지 전체 핸들링. Ebbets Field IP를 활용한 다양한 아이템을 한국 캐주얼 무드에 맞게 재해석.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Outer</span>
+        <span class="arc-modal-item">Knitwear</span>
+        <span class="arc-modal-item">Graphic Sweatshirts</span>
+        <span class="arc-modal-item">Accessories</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Outer</span><span class="arc-tag">Knitwear</span><span class="arc-tag">F/W</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arc-modal" id="arcModal23SS" onclick="closeArcModalOutside(event,'arcModal23SS')">
+  <div class="arc-modal-inner" onclick="event.stopPropagation()">
+    <span class="arc-modal-tape"></span>
+    <button class="arc-modal-close" onclick="closeArcModal('arcModal23SS')">×</button>
+    <div class="arc-modal-body">
+      <div class="arc-modal-season">EBBETS FIELD · B.CAVE · 2023 S/S</div>
+      <div class="arc-modal-title">2023 S/S Season</div>
+      <div class="arc-modal-stats" style="font-family:'Courier Prime',monospace;font-size:0.72rem;color:#888;letter-spacing:0.1em;margin-bottom:1.2rem;">3 Styles &nbsp;·&nbsp; 5 SKU</div>
+      <div class="arc-modal-brand">EBBETS FIELD / B.CAVE — Seoul, KR</div>
+      <div class="arc-modal-grid">
+        <div class="arc-modal-img-wrap"><img src="images/img_05.jpg0" alt="season archive" style="width:100%;height:100%;object-fit:contain;background:#f0f0ee;"></div>
+      </div>
+      <div class="arc-modal-desc">
+        Ebbets Field 합류 첫 시즌. 그래픽 맨투맨과 블록코어 스팟 아이템 참여.
+      </div>
+      <div class="arc-modal-items-label">// Key Items</div>
+      <div class="arc-modal-items">
+        <span class="arc-modal-item">Graphic Sweatshirts</span>
+        <span class="arc-modal-item">Blockcore</span>
+        <span class="arc-modal-item">Hockey Tee</span>
+      </div>
+      <hr class="arc-modal-divider">
+      <div class="arc-tags"><span class="arc-tag">Graphics</span><span class="arc-tag">Blockcore</span><span class="arc-tag">S/S</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TECH SKILLS -->
+<section class="tech-section" id="skills">
+  <div class="section-label">// Technical Skills — Adobe · AI</div>
+  <h2 class="section-title">Skills</h2>
+  <div class="tech-grid">
+
+    <div class="tech-col">
+      <h3>Adobe</h3>
+      <div class="skill-row">
+        <div class="skill-label">Illustrator <span>★★★★☆</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:90%"></div></div>
+        <div class="skill-dots-row">
+          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot half"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Photoshop <span>★★★☆</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:70%"></div></div>
+        <div class="skill-dots-row">
+          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot half"></div><div class="dot"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Lightroom <span>★★★</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:65%"></div></div>
+        <div class="skill-dots-row">
+          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:2rem">AI Tool</h3>
+      <div class="skill-row">
+        <div class="skill-label">Gemini <span>★★★★</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:80%"></div></div>
+        <div class="skill-dots-row">
+          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Claude <span>★★★★★</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:100%"></div></div>
+        <div class="skill-dots-row">
+          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-col">
+      <h3>Fashion Design</h3>
+      <ul class="fd-list">
+        <li>
+          <span class="fd-bullet">—</span>
+          <span class="fd-text"><em>Knitwear</em> 특화 디자이너로, 기획부터 생산까지 전 과정을 주도적으로 수행</span>
+        </li>
+        <li>
+          <span class="fd-bullet">—</span>
+          <span class="fd-text">COVERNAT IMC 아이템 <em>WORMON 라인</em> 전담 디자이너 — 쉐르파·플리스 소재 기반 라인의 기획·디자인 전담</span>
+        </li>
+        <li>
+          <span class="fd-bullet">—</span>
+          <span class="fd-text">Pertex·Primaloft·Polartec 등 <em>기능성 특수 원단</em> 활용 경험 보유</span>
+        </li>
+        <li>
+          <span class="fd-bullet">—</span>
+          <span class="fd-text">현장 이해도를 바탕으로 한 정확한 <em>작업지시서(Tech Pack) 및 QC 문서</em> 작성</span>
+        </li>
+        <li>
+          <span class="fd-bullet">—</span>
+          <span class="fd-text"><em>AI Tool</em>을 업무 전반에 적극 활용 — 리서치·문서 작업·이미지 생성 등 실무 효율화</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="exp-section" id="experience">
+  <div class="section-label">// Career Timeline</div>
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-date">2024. 05 — Present</div></div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-box">
+          <div class="tl-role">Fashion Designer</div>
+          <div class="tl-company">COVERNAT · B.CAVE — Seoul, KR</div>
+          <div class="tl-desc">니트 복종 특화 디자이너로 소재 기획·디자인 개발 전담. WORMON 라인(쉐르파·플리스) 기획·디자인 전담. 아치 로고 등 메인 IP 라인 및 기능성 소재 아이템 담당. 품평 샘플부터 메인 생산까지 전 과정 핸들링.</div>
+          <div class="tl-tags"><span class="tl-tag">Knitwear</span><span class="tl-tag">Woven</span><span class="tl-tag">WORMON Line</span><span class="tl-tag">Tech Fabric</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-date">2022. 12 — 2024. 05</div></div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-box">
+          <div class="tl-role">Fashion Designer</div>
+          <div class="tl-company">EBBETS FIELD · B.CAVE — Seoul, KR</div>
+          <div class="tl-desc">빈티지 베이스볼 헤리티지 브랜드 디자이너. 스팟 드랍 방식으로 아이템을 기획·제안하고 메인 생산까지 전 과정 핸들링. 23SS~24SS 3시즌 전체 참여.</div>
+          <div class="tl-tags"><span class="tl-tag">Knitwear</span><span class="tl-tag">Graphic</span><span class="tl-tag">Blockcore</span><span class="tl-tag">Women Line</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-date">2021. 11 — 2022. 11</div></div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-box">
+          <div class="tl-role">Photo Assistant</div>
+          <div class="tl-company">Musinsa Standard — Seoul, KR</div>
+          <div class="tl-desc">무신사스탠다드 포토팀 어시스턴트. 패션 비주얼 커뮤니케이션 전반을 경험하며 브랜드 이미지 제작 프로세스 습득.</div>
+          <div class="tl-tags"><span class="tl-tag">Visual</span><span class="tl-tag">E-Commerce</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-date">2020. 07 — 2021. 06</div></div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-box">
+          <div class="tl-role">Children's Wear Designer</div>
+          <div class="tl-company">Dinosoles — Seoul, KR</div>
+          <div class="tl-desc">아동복 브랜드 디자이너. 패턴 제작·소재 기획·그래픽 디자인까지 디자인 업무 전반 총괄.</div>
+          <div class="tl-tags"><span class="tl-tag">Pattern</span><span class="tl-tag">Graphic</span><span class="tl-tag">Children's Wear</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-date">2019. 01 — 2020. 01</div></div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-box">
+          <div class="tl-role">Design Intern</div>
+          <div class="tl-company">Oddi Clothing — Los Angeles, US</div>
+          <div class="tl-desc">LA 자바 시장 기반 여성복 브랜드(미시·미세스 타겟). 디자인 어시스턴트로 현지 패션 시장 실무 경험.</div>
+          <div class="tl-tags"><span class="tl-tag">Women's Wear</span><span class="tl-tag">LA Market</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-item--last">
+      <div class="tl-left"><div class="tl-date">2013. 03 — 2019. 02</div></div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-right">
+        <div class="tl-box">
+          <div class="tl-role">B.F.A. Fashion Design</div>
+          <div class="tl-company">동서대학교 — Busan, KR</div>
+          <div class="tl-desc">패션 디자인 전공. 패턴·소재·봉제·컬렉션 기획 등 패션 디자인 전반 전문 교육 이수.</div>
+          <div class="tl-tags"><span class="tl-tag">Fashion Design</span><span class="tl-tag">Pattern</span><span class="tl-tag">Collection</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="section-label">// Get in Touch</div>
+  <div class="contact-inner">
+    <h2>Let's make<br>something.</h2>
+    <p>브랜드의 가장 깊은 곳까지 함께하겠습니다.</p>
+    <a href="mailto:psi55939535@gmail.com" class="contact-email">psi55939535@gmail.com</a>
+    <div class="contact-info">
+      010.5593.9535 · @sangsangoz · Seoul, KR
+    </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/sangsangoz/" target="_blank" class="social-link">Instagram</a>
+      <a href="#" class="social-link">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2026 Park Sangin. All rights reserved.</span>
+  <span class="footer-tag">Fashion Designer · Seoul</span>
+</footer>
+
+<script>
+  // 아카이브 모달 돋보기 확대
+  function initMagnifier(wrap) {
+    const img = wrap.querySelector('img');
+    if (!img) return;
+    if (wrap.dataset.magInit) return;
+    wrap.dataset.magInit = '1';
+
+    const mag = document.createElement('div');
+    mag.className = 'arc-magnifier';
+    const magImg = document.createElement('img');
+    magImg.src = img.src;
+    mag.appendChild(magImg);
+    wrap.appendChild(mag);
+
+    const ZOOM = 2.5;
+    const MAG_R = 80; // 반지름
+
+    wrap.addEventListener('mousemove', (e) => {
+      const rect = wrap.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      mag.style.display = 'block';
+      mag.style.left = x + 'px';
+      mag.style.top = y + 'px';
+
+      // 이미지 실제 표시 영역 계산 (object-fit: contain)
+      const wW = rect.width, wH = rect.height;
+      const iW = img.naturalWidth || img.width;
+      const iH = img.naturalHeight || img.height;
+      const scale = Math.min(wW / iW, wH / iH);
+      const dispW = iW * scale;
+      const dispH = iH * scale;
+      const offX = (wW - dispW) / 2;
+      const offY = (wH - dispH) / 2;
+
+      // 돋보기 내 이미지 위치
+      const imgX = (x - offX) / dispW;
+      const imgY = (y - offY) / dispH;
+
+      const zW = dispW * ZOOM;
+      const zH = dispH * ZOOM;
+      magImg.style.width = zW + 'px';
+      magImg.style.height = zH + 'px';
+      magImg.style.left = (MAG_R - imgX * zW) + 'px';
+      magImg.style.top = (MAG_R - imgY * zH) + 'px';
+    });
+
+    wrap.addEventListener('mouseleave', () => {
+      mag.style.display = 'none';
+    });
+  }
+
+  // 아카이브 모달 열기
+  function openArcModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      modal.querySelectorAll('.arc-modal-img-wrap').forEach(initMagnifier);
+    }, 50);
+  }
+  function closeArcModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeArcModalOutside(event, id) {
+    // 닫기 버튼으로만 닫힘 — 바깥 터치로 닫히지 않도록 막음
+    event.stopPropagation();
+  }
+
+  // 아카이브 필터
+  function filterArchive(type, btn) {
+    document.querySelectorAll('.arc-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cards = document.querySelectorAll('.archive-card');
+    let count = 0;
+    cards.forEach(card => {
+      const brand = card.dataset.brand;
+      const season = card.dataset.season;
+      let show = false;
+      if (type === 'all') show = true;
+      else if (type === 'covernat' && brand === 'covernat') show = true;
+      else if (type === 'ebbets' && brand === 'ebbets') show = true;
+      else if (type === 'fw' && season === 'fw') show = true;
+      else if (type === 'ss' && season === 'ss') show = true;
+      card.classList.toggle('hidden', !show);
+      if (show) count++;
+    });
+    document.getElementById('arcVisibleCount').textContent = count;
+  }
+
+  // 아카이브 뷰 토글
+  function setArcView(view) {
+    const grid = document.getElementById('arcGrid');
+    const timeline = document.getElementById('arcTimeline');
+    const btnGrid = document.getElementById('btnGrid');
+    const btnTimeline = document.getElementById('btnTimeline');
+    if (view === 'grid') {
+      grid.classList.remove('timeline-hidden');
+      timeline.classList.remove('active');
+      btnGrid.classList.add('active');
+      btnTimeline.classList.remove('active');
+    } else {
+      grid.classList.add('timeline-hidden');
+      timeline.classList.add('active');
+      btnGrid.classList.remove('active');
+      btnTimeline.classList.add('active');
+    }
+  }
+
+  // ESC 키로 모달 닫기
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.arc-modal.open').forEach(m => {
+        m.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+
+
+  function openMobileMenu() {
+    document.getElementById('mobileMenu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openDDModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDDModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeDDModalOutside(event, id) {
+    // 모바일: 닫기 버튼으로만 닫힘 — 바깥 터치로 닫히지 않도록 막음
+    event.stopPropagation();
+  }
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOutside(event, id) {
+    if (event.target === document.getElementById(id)) closeModal(id);
+  }
+
+  // Deep Dive 스택 → 펼치기 (공통)
+  function expandStack(gridId, hintId, collapseId, e) {
+    const grid = document.getElementById(gridId);
+    const hint = document.getElementById(hintId);
+    const collapseHint = document.getElementById(collapseId);
+    if (!grid || !grid.classList.contains('stacked')) return;
+    if (e && e.stopPropagation) e.stopPropagation();
+    grid.classList.remove('stacked');
+    grid.classList.add('expanded');
+    grid.onclick = null;
+    hint.classList.add('hidden');
+    collapseHint.classList.remove('hidden');
+    // pointer-events handled by CSS (.deep-grid.expanded .deep-card)
+    grid.querySelectorAll('.deep-card').forEach(card => {
+      card.style.pointerEvents = '';
+    });
+  }
+
+  // Deep Dive 닫기 → 다시 쌓기 (공통)
+  function collapseStack(gridId, hintId, collapseId, sectionId) {
+    const grid = document.getElementById(gridId);
+    const hint = document.getElementById(hintId);
+    const collapseHint = document.getElementById(collapseId);
+    grid.classList.remove('expanded');
+    grid.classList.add('stacked');
+    grid.onclick = (e) => expandStack(gridId, hintId, collapseId, e);
+    hint.classList.remove('hidden');
+    collapseHint.classList.add('hidden');
+    grid.querySelectorAll('.deep-card').forEach(card => {
+      card.style.pointerEvents = '';
+    });
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      const navH = document.querySelector('nav').offsetHeight;
+      const top = section.getBoundingClientRect().top + window.scrollY - navH - 8;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 100);
+  }
+
+  // ===== iOS 터치 이벤트 보완 (아이폰 메모장·인앱브라우저) =====
+  document.addEventListener('DOMContentLoaded', () => {
+    // onclick이 있는 모든 div/button에 touchstart → click 강제 발화
+    document.querySelectorAll('[onclick]').forEach(el => {
+      el.addEventListener('touchstart', function(e) {
+        // 스크롤 중 발화 방지
+        this._touchMoved = false;
+      }, { passive: true });
+      el.addEventListener('touchmove', function() {
+        this._touchMoved = true;
+      }, { passive: true });
+      el.addEventListener('touchend', function(e) {
+        if (!this._touchMoved) {
+          e.preventDefault();
+          this.click();
+        }
+      }, { passive: false });
+    });
+
+    // index-banner 링크 터치 보완 (eval 대신 안전한 함수 매핑)
+    document.querySelectorAll('.index-item a, .nav-links a, .mobile-menu a').forEach(el => {
+      el.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        var fn = this.getAttribute('onclick') || '';
+        // goTo('xxx') 패턴 추출
+        var goToMatch = fn.match(/goTo\(['"]([^'"]+)['"]\)/);
+        if (goToMatch) { goTo(goToMatch[1]); }
+        // closeMobileMenu() 패턴
+        if (fn.indexOf('closeMobileMenu') !== -1) { closeMobileMenu(); }
+        // openMobileMenu() 패턴
+        if (fn.indexOf('openMobileMenu') !== -1) { openMobileMenu(); }
+        // window.scrollTo 패턴
+        if (fn.indexOf('scrollTo') !== -1) { window.scrollTo({top:0,behavior:'smooth'}); }
+      }, { passive: false });
+    });
+
+    // 힌트 텍스트 클릭 시 전파 차단
+    ['stackHintKnit','stackHintJersey'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('click', e => e.stopPropagation());
+    });
+
+    // archive card 터치 보완
+    document.querySelectorAll('.archive-card').forEach(el => {
+      el.addEventListener('touchstart', function() { this._moved = false; }, { passive: true });
+      el.addEventListener('touchmove', function() { this._moved = true; }, { passive: true });
+      el.addEventListener('touchend', function(e) {
+        if (!this._moved) { e.preventDefault(); this.click(); }
+      }, { passive: false });
+    });
+  });
+
+  // 네비 스크롤
+  function goTo(id) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    const navH = document.querySelector('nav').offsetHeight;
+    const top = target.getBoundingClientRect().top + window.scrollY - navH - 8;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  // 네비 링크 부드러운 스크롤
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const navH = document.querySelector('nav').offsetHeight;
+        const top = target.getBoundingClientRect().top + window.scrollY - navH - 8;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.deep-img').forEach(container => {
+      const img = container.querySelector('img');
+      if (!img) return;
+
+      container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        img.style.transformOrigin = `${x}% ${y}%`;
+        img.style.transform = 'scale(1.5)';
+      });
+
+      container.addEventListener('mouseleave', () => {
+        img.style.transform = 'scale(1)';
+        img.style.transformOrigin = 'center center';
+      });
+    });
+  });
+
+// ===== 핀치줌 (모바일) - 딥다이브 & 아카이브 모달 이미지 =====
+function initPinchZoom(imgEl, containMode) {
+  if (!imgEl || imgEl.dataset.pinchInit) return;
+  imgEl.dataset.pinchInit = '1';
+
+  let scale = 1, startDist = 0, startScale = 1;
+  let originX = 0, originY = 0;
+  let panX = 0, panY = 0;
+  let lastTouchX = 0, lastTouchY = 0;
+  let rafId = null;
+  let cachedRect = null;
+  let isLifted = false; // 최상단 레이어로 올라간 상태
+
+  function getDist(t) {
+    const dx = t[0].clientX - t[1].clientX;
+    const dy = t[0].clientY - t[1].clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+  function getMidpoint(t) {
+    return {
+      x: (t[0].clientX + t[1].clientX) / 2,
+      y: (t[0].clientY + t[1].clientY) / 2
+    };
+  }
+  function scheduleApply(nextPanX, nextPanY, nextScale) {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      imgEl.style.transformOrigin = '0 0';
+      imgEl.style.transform = 'translate(' + nextPanX + 'px,' + nextPanY + 'px) scale(' + nextScale + ')';
+      rafId = null;
+    });
+  }
+
+  // 확대 시작: 이미지를 최상단 레이어로 올리기 (딥다이브만)
+  function liftToTop() {
+    if (isLifted) return;
+    isLifted = true;
+    if (containMode) {
+      // 아카이브: 박스 안에서만 — fixed 없이 rect만 갱신
+      cachedRect = imgEl.getBoundingClientRect();
+      return;
+    }
+    const rect = imgEl.getBoundingClientRect();
+    // 이미지 자리를 유지할 placeholder 삽입
+    const placeholder = document.createElement('div');
+    placeholder.dataset.pinchPlaceholder = '1';
+    placeholder.style.width = rect.width + 'px';
+    placeholder.style.height = rect.height + 'px';
+    placeholder.style.display = 'block';
+    placeholder.style.flexShrink = '0';
+    imgEl.parentNode.insertBefore(placeholder, imgEl);
+    // 이미지를 뷰포트 최상단 레이어로
+    imgEl.style.position = 'fixed';
+    imgEl.style.top = rect.top + 'px';
+    imgEl.style.left = rect.left + 'px';
+    imgEl.style.width = rect.width + 'px';
+    imgEl.style.height = rect.height + 'px';
+    imgEl.style.zIndex = '99999';
+    imgEl.style.margin = '0';
+    cachedRect = imgEl.getBoundingClientRect();
+  }
+
+  // 복귀: 원래 스타일로 되돌리기
+  function resetTransform() {
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    scale = 1; panX = 0; panY = 0;
+    imgEl.style.transition = 'transform 0.28s cubic-bezier(0.25,0.46,0.45,0.94)';
+    imgEl.style.transformOrigin = 'center center';
+    imgEl.style.transform = 'scale(1)';
+    setTimeout(() => {
+      imgEl.style.transition = '';
+      if (!containMode) {
+        imgEl.style.position = '';
+        imgEl.style.top = '';
+        imgEl.style.left = '';
+        imgEl.style.width = '';
+        imgEl.style.height = '';
+        imgEl.style.zIndex = '';
+        imgEl.style.margin = '';
+        const ph = imgEl.parentNode && imgEl.parentNode.querySelector('[data-pinch-placeholder]');
+        if (ph) ph.parentNode.removeChild(ph);
+      }
+      isLifted = false;
+    }, 290);
+  }
+
+  imgEl.addEventListener('touchstart', (e) => {
+    if (e.touches.length >= 2) {
+      e.preventDefault();
+      // containMode(아카이브): 박스 안에서만 확대, liftToTop 없음
+      if (!containMode) liftToTop();
+      cachedRect = imgEl.getBoundingClientRect();
+      startDist = getDist(e.touches);
+      startScale = scale;
+      const mid = getMidpoint(e.touches);
+      originX = (mid.x - cachedRect.left - panX) / scale;
+      originY = (mid.y - cachedRect.top - panY) / scale;
+    } else if (e.touches.length === 1) {
+      if (scale > 1) {
+        e.preventDefault();
+        lastTouchX = e.touches[0].clientX;
+        lastTouchY = e.touches[0].clientY;
+      }
+    }
+  }, { passive: false });
+
+  imgEl.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      const dist = getDist(e.touches);
+      const newScale = Math.min(Math.max(startScale * (dist / startDist), 1), 4);
+      const mid = getMidpoint(e.touches);
+      const newPanX = mid.x - cachedRect.left - originX * newScale;
+      const newPanY = mid.y - cachedRect.top - originY * newScale;
+      panX = newPanX; panY = newPanY; scale = newScale;
+      scheduleApply(panX, panY, scale);
+    } else if (e.touches.length === 1 && scale > 1) {
+      e.preventDefault();
+      const dx = e.touches[0].clientX - lastTouchX;
+      const dy = e.touches[0].clientY - lastTouchY;
+      lastTouchX = e.touches[0].clientX;
+      lastTouchY = e.touches[0].clientY;
+      panX += dx; panY += dy;
+      scheduleApply(panX, panY, scale);
+    }
+  }, { passive: false });
+
+  imgEl.addEventListener('touchend', (e) => {
+    if (e.touches.length === 0) {
+      resetTransform();
+    } else if (e.touches.length === 1 && scale > 1) {
+      lastTouchX = e.touches[0].clientX;
+      lastTouchY = e.touches[0].clientY;
+    }
+  }, { passive: false });
+}
+
+function applyPinchZoomToModal(modalEl) {
+  if (!modalEl) return;
+  // 아카이브 모달 — 박스 안에서만 확대 (containMode)
+  modalEl.querySelectorAll('.arc-modal-img-wrap img').forEach(el => initPinchZoom(el, true));
+  // 딥다이브 모달 — 최상단 레이어로 올려서 확대
+  modalEl.querySelectorAll('.dd-modal-img').forEach(el => initPinchZoom(el, false));
+  modalEl.querySelectorAll('.modal-img').forEach(el => initPinchZoom(el, false));
+}
+
+// MutationObserver로 모달 열릴 때 자동 적용
+const pinchObserver = new MutationObserver((mutations) => {
+  mutations.forEach(m => {
+    if (m.target.classList && m.target.classList.contains('open')) {
+      applyPinchZoomToModal(m.target);
+    }
+  });
+});
+document.querySelectorAll('.arc-modal, .dd-modal-overlay, .modal-overlay').forEach(el => {
+  pinchObserver.observe(el, { attributes: true, attributeFilter: ['class'] });
+});
+
+</script>
+
+</body>
+</html>
